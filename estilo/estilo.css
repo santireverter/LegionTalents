@@ -1,0 +1,8 @@
+.contenedorPersonal{
+    display: flex;
+    flex-flow: column;
+}
+
+.colorfooter{
+    color: #ffffff;
+}
