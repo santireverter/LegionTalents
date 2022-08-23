@@ -1948,3 +1948,15 @@ button:hover .button-text {
 }
 
 /* footer */
+
+.plan {
+  width: 150px;
+}
+
+.home {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
