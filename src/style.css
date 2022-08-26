@@ -1,0 +1,267 @@
+@font-face {
+  font-family: Azonix;
+  src: url(../src/fonts/Azonix.otf);
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: white;
+}
+
+body::before {
+  background-image:
+    url(../src/img/image1.png);
+    background-color: hsl(0, 0%, 9%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+body {
+  color: white;
+}
+
+header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+}
+
+header .navbar-brand:hover {
+  opacity: 0.7;
+}
+
+header .navbar-nav {
+  gap: 20px;
+}
+
+header .nav-link{
+  color: white;
+  font-size: 20px;
+}
+
+header img {
+  width: 60px;
+  margin-right: 20px;
+}
+
+.cambio {
+  background: linear-gradient(60deg, #64748b, #64748b);
+  animation-name: cambio;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+@keyframes cambio {
+  0% {opacity: 0; }
+  100% {opacity: 1; } 
+}
+
+header .red {
+  position: fixed;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 38px;
+}
+
+header .wpp {
+  width: 2px;
+  height: 30vw;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+header .icon {
+  position: relative;
+  top: 120px;
+  font-size: 40px;
+}
+
+header .icon i:hover {
+  color: rgb(108, 156, 35);
+  cursor: pointer;
+}
+
+.home {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .casco {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+section .title {
+  font-family:'Azonix', Courier, monospace ;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.btnArt {
+  margin-top: 80px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnArt .btn {
+  font-size: 20px;
+  padding: 10px 20px;
+} 
+
+.home p {
+  font-size: 32px;
+  width: 70%;
+  text-align: center;
+}
+
+/* SERVICIOS */
+
+main h3 {
+  margin: 80px 0;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+main h4 {
+  margin: 80px 0;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.serv article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: black;
+}
+
+.serv h3 {
+  padding-top: 100px
+}
+
+.serv .card {
+  text-align: left;
+  width: 320px;
+  height: 500px;
+  color: black;
+  font-size: 10px;
+}
+
+.serv .card i {
+  font-size: 150px;
+  margin: 50px auto;
+}
+
+.serv .card h5 {
+  margin-left: 8px;
+}
+
+.serv .card span {
+  font-size: 15px;
+  color: #6C757D;
+  margin-left: 8px;
+}
+
+.serv .card p {
+  font-size: 18px;
+  margin-top: 5px;;
+  margin-left: 8px;
+}
+
+.serv .card button {
+  width: 180px;
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+/* NOSOTROS */
+
+.nos {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nos h4 {
+  grid-area: h4;
+}
+
+.nos p {
+  font-size: 20px;
+  grid-area: pp;
+  justify-self:center;
+  width: 70%;
+}
+
+.nos img {
+  grid-area: img;
+  width: 400px;
+}
+
+.nos .num {
+  grid-area: num;
+  display: flex;
+  gap: 50px;
+  justify-content:space-evenly;
+}
+
+.nos .num span {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.nos .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "img h4 h4 h4"
+  "img pp pp pp"
+  "img num num num";
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  header {
+    position: sticky;
+  }
+  header .navbar-brand {
+    visibility: hidden;
+  }
+  header .red {
+    display: none;
+  }
+  .casco {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .home p {
+    font-size: 25px;
+    width: 90%;
+  }
+  .btnArt {
+    margin-top: 40px;
+    width: 80%;
+  }
+}
