@@ -1,287 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilo/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/boots/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="shortcut icon" href="src/img/ico.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/d6cbf412fd.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Legion Talents</title>
-    <link rel="shortcut icon" href="utilities/img/ico.png" type="image/x-icon">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg bg-blue-100">
+  </head>
+  <body>
+    <header>
+      <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="./utilities/img/Frame.png" alt="" width="30" height="24">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre Nosotros</a>
-                    </li>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Servicios
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./paginas/professionalGrowth.html">Professional Profile
-                                    Growth</a></li>
-                            <li><a class="dropdown-item" href="./paginas/softwareFactory.html">Software Factory</a></li>
-                            <li class="nav-item"><a class="dropdown-item disabled" href="#">Cursos (Proximamente)</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Contacto</a>
-                    </li>
-                </ul>
+          <a class="navbar-brand" href="index.html"
+            ><img src="src/img/ico.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#serv">Servicios</a>
+              <a class="nav-link" href="#nos">Nosotros</a>
+              <a class="nav-link" href="#cont">Contacto</a>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <div class="px-4 py-5 my-5 text-center home">
-        <img class="d-block mx-auto mb-4" src="./utilities/img/Frame.png" alt="" width="72" height="57">
-        <h1 class="display-5 fw-bold">Legion Talents</h1>
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Nos especialiamos en brindar asesoramiento en RRHH y desarrollo de software para potenciar tu marca y llevarla a otro nivel.</p>
-            <div class="d-grid gap-5 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Soy Persona</button>
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Soy Empresa</button>
-            </div>
+      </nav>
+      <div class="red">
+        <div class="wpp">
+          <div class="icon">
+            <a href="https://wa.me/5493512077580"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
+    </header>
 
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="./utilities/img/meme1.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
-                    height="500" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Nuestra Mision</h1>
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Lorem ipsum dolor sit amet.
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, veritatis!</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Lorem ipsum dolor sit amet.
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, placeat?</strong> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Lorem ipsum dolor sit amet.
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, sit!</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <main>
+      <section id="home" class="home">
+        <img src="src/img/ico.png" alt="casco" class="casco" />
+        <h1 class="title">Legion Talents</h1>
+        <p>
+          Nos especialiamos en brindar asesoramiento en RRHH y desarrollo de
+          software para potenciar tu marca y llevarla a otro nivel.
+        </p>
+        <article class="btnArt">
+          <a href="pages/persona.html"
+            ><button type="button" class="btn btn-outline-primary">
+              Soy Persona
+            </button></a
+          >
+          <a href="pages/empresa.html"
+            ><button type="button" class="btn btn-primary">
+              Soy Empresa
+            </button></a
+          >
+        </article>
+      </section>
 
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-        <h1 class="display-4 fw-bold">Nuestros founders</h1>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 d-flex align-items-stretch flex-column">
-                <div class="member-img">
-                    <img src="./utilities/img/CEO.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
-                    width="700" height="500" loading="lazy">
-                </div>
-                <div class="member-info">
-                    <h4>Ignacio Porro</h4>
-                    <h6>CEO</h6>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor voluptate quis exercitationem, qui nostrum reprehenderit veritatis laudantium quibusdam impedit.</p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 d-flex align-items-stretch flex-column">
-                <div class="member-img">
-                    <img src="./utilities/img/CTO.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
-                    width="700" height="500" loading="lazy">
-                </div>
-                <div class="member-info">
-                    <h4>Agustin Bellini</h4>
-                    <h6>CTO</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo vitae optio, dolores itaque distinctio sunt ad quisquam cumque atque quidem!</p>
-                </div>
-            </div>
-        </div>
-    </div>
+      <section class="serv" id="serv">
+        <h3>NUESTROS SERVICIOS</h3>
+        <article>
+          <div class="card">
+            <i class="fa-solid fa-cat"></i>
+            <h5>Professional Profile Growth</h5>
+            <span>Potencia tu perfil profesional</span>
+            <p>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <button class="btn btn-primary">Quiero saber más</button>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-cat"></i>
+            <h5>Professional Profile Growth</h5>
+            <span>Potencia tu perfil profesional</span>
+            <p>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <button class="btn btn-primary">Quiero saber más</button>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-cat"></i>
+            <h5>Professional Profile Growth</h5>
+            <span>Potencia tu perfil profesional</span>
+            <p>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <button class="btn btn-primary">Quiero saber más</button>
+          </div>
+        </article>
+      </section>
 
-    <section id="contact" class="section-bg">
+      <section class="nos" id="nos">
+        <h3>NOSOTROS</h3>
+        <div class="grid">
+          <img src="src/img/nos.jpg" alt="" />
+          <h4>SOMOS LA SOLUCIÓN A TUS PROBLEMAS</h4>
+          <p>
+            Nos especializamos en headhunting de perfiles IT y tradicionales,
+            teniendo una amplia experiencia en busquedas, ofreciendo un SLA de
+            72 hs para presentar postulantes a nuestros clientes.
+          </p>
+          <div class="num">
+            <div><span>123</span><p>Empleados</p></div>
+            <div><span>123</span><p>Empleados</p></div>
+            <div><span>123</span><p>Empleados</p></div>
+          </div>
+        <article>
+          <h4>TESTIMONIOS</h4>
+        </article>
+      </section>
 
-        <div class="container" data-aos="fade-up">
-        
-            <div class="section-header">
-                <h2>Contacto</h2>
-                <p>Disponemos de distintos canales de comunicacion</p>
-            </div>
-        
-            <div class="row contact-info">
-        
-                <div class="col-md-4">
-                    <div class="contact-address">
-                        <i class="bi bi-geo-alt"></i>
-                        <h3>Linkedin</h3>
-                        <p><a href="https://www.linkedin.com/company/legion-talents/?original_referer=" target="_blank">Legion
-                                Talents</a></p>
-                    </div>
-                </div>
-        
-                <div class="col-md-4">
-                    <div class="contact-phone">
-                        <i class="bi bi-phone"></i>
-                        <h3>Numero telefonico</h3>
-                        <p><a href="https://wa.me/5493512077580" target="_blank">+54 9 3512077580</a></p>
-                    </div>
-                </div>
-        
-                <div class="col-md-4">
-                    <div class="contact-email">
-                        <i class="bi bi-envelope"></i>
-                        <h3>Email</h3>
-                        <p><a href="mailto:legiontalents@gmail.com" target="_blank">legiontalents@gmail.com</a></p>
-                    </div>
-                </div>
-        
-            </div>
-        
-            <div class="form">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre y Apellido"
-                                required>
-                        </div>
-                        <div class="form-group col-md-6 mt-3 mt-md-0">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Correo electronico"
-                                required>
-                        </div>
-                    </div>
-                    <div class="form-group mt-3">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
-                    </div>
-                    <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <!-- <div class="my-3">
-                        <div class="loading">Cargando...</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Tu mensaje ha sido enviado. ¡Muchas gracias, pronto te estaremos respondiendo!
-                        </div>
-                    </div> -->
-                    <button class="learn-more">
-                        <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Enviar</span>
-                    </button>
-                </form>
-            </div>
-        
-        </div>
-        </section>
-
-        <footer class="bg-blue-800" id="footer">
-            <div class="footer-top colorFooter">
-                <div class="container">
-                    <div class="row">
-        
-                        <div class="col-lg-3 col-md-6 footer-info">
-                            <h3>Legion Talents</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam iste eaque amet et nulla
-                                adipisci vero
-                                repellat at necessitatibus tenetur. Aliquam perferendis, architecto laborum voluptate facere
-                                reprehenderit
-                                quo officia delectus!</p>
-                        </div>
-        
-                        <div class="col-lg-3 col-md-6 footer-links">
-                            <h4>Links útiles</h4>
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#">Quienes somos</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#">Cursos</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#">Contacto</a></li>
-                            </ul>
-                        </div>
-        
-                        <div class="col-lg-3 col-md-6 footer-contact">
-                            <h4>Contáctanos</h4>
-                            <p>
-                                Córdoba, CP5000<br>
-                                Argentina <br>
-                                <strong>Telefono:</strong> +54 9 3512077580<br>
-                                <strong>Email:</strong> legiontalents@gmai.com<br>
-                            </p>
-        
-                            <div class="social-links">
-                                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                                <a href="#" class="google-plus"><i class="bi bi-envelope"></i></a>
-                                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                            </div>
-        
-                        </div>
-        
-                    </div>
-                </div>
-            </div>
-        
-            <div class="container">
-                <div class="copyright">
-                    &copy; Copyright <strong>LegionTalents</strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    Designed by <a href="https://www.linkedin.com/in/agustinbelliniit/">Gusbelito</a>
-                </div>
-            </div>
-        </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+      <section>
+        <h3>CONTACTO</h3>
+      </section>
+    </main>
+    <script src="src/boots/js/bootstrap.bundle.min.js"></script>
+    <script src="src/script.js"></script>
+  </body>
 </html>
