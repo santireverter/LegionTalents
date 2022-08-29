@@ -1,0 +1,182 @@
+/* NOSOTROS */
+
+main {
+  .nos {
+    padding-top: 20px;
+    width: 70%;
+    margin: 0 auto;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "img h4 h4 h4"
+        "img pp pp pp"
+        "img num num num";
+      h4 {
+        grid-area: h4;
+        margin: 80px 0;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+      }
+      p {
+        font-size: 20px;
+        grid-area: pp;
+        justify-self: center;
+        width: 80%;
+        text-align: justify;
+      }
+      .nosImg {
+        grid-area: img;
+        width: 400px;
+        justify-self: end;
+      }
+      .num {
+        grid-area: num;
+        display: flex;
+        gap: 50px;
+        justify-content: space-evenly;
+        div {
+          span {
+            font-size: 40px;
+            font-weight: bolder;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    /* TESTIMONIOS */
+    .testi {
+      .opB,
+      .opC,
+      .opD {
+        display: none;
+        img {
+          border-radius: 200px;
+          width: 250px;
+          height: 250px;
+        }
+      }
+      .show {
+        display: flex;
+      }
+      .cardB {
+        width: 90%;
+        margin: 0 auto;
+        h5 {
+          text-align: center;
+        }
+      }
+      .cardBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 100px;
+        font-weight: 400;
+        p {
+          font-size: 25px;
+        }
+        .stars {
+          i {
+            margin-bottom: 30px;
+            font-size: 25px;
+            color: #a855f7;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 992px) {
+  main {
+    .nos {
+      width: 87%;
+      margin: 0 auto;
+      .grid {
+        .nosImg {
+          width: 250px;
+          margin: auto 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    .nos {
+      width: 100%;
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "pp pp pp"
+          "num num num";
+        .nosImg {
+          display: none;
+        }
+        h4 {
+          display: none;
+        }
+        p {
+          font-size: 20px;
+          width: 95%;
+          text-align: justify;
+        }
+        .num {
+          justify-content: space-evenly;
+          gap: 7px;
+          div {
+            span {
+              font-size: 30px;
+              font-weight: bold;
+            }
+            p {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    /* TESTIMONIOS */
+    .testi {
+      #opB,
+      #opC,
+      #opD {
+        display: flex;
+        padding: 10px;
+        border-radius: 20px;
+        margin: 25px auto;
+      }
+      .cardB {
+        background-color: #1e293b;
+        .cardBTest {
+          align-self: center;
+          h5 {
+            font-size: 18px;
+          }
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+        .cardBody {
+          margin-left: 10px;
+          p {
+            font-size: 18px;
+          }
+          .stars {
+            
+            i {
+              margin-bottom: 10px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// Clases que se comparten con más de un elemento
+
+.casco {
+  width: 200px;
+  margin-bottom: 20px;
+}
+.title {
+  font-family: "Azonix", Courier, monospace;
+  margin-bottom: 50px;
+  width: 200px;
+  text-align: center;
+}
+.subtitle {
+  padding-top: 100px;
+  margin-bottom: 80px;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+.subtitle-sm {
+  margin: 80px 0;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .casco {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+}

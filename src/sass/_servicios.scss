@@ -1,0 +1,79 @@
+/* SERVICIOS */
+
+main {
+  .serv {
+    article {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 50px;
+      color: black;
+      .card {
+        border: none;
+        text-align: center;
+        width: 380px;
+        height: 600px;
+        color: white;
+        font-size: 10px;
+        background-color: transparent;
+        i {
+          font-size: 150px;
+          margin: 50px auto;
+        }
+        h5 {
+          margin-left: 8px;
+        }
+        span {
+          font-size: 15px;
+          color: #6c757d;
+          margin-left: 8px;
+        }
+        p {
+          font-size: 18px;
+          margin-top: 5px;
+          margin-left: 8px;
+        }
+        button {
+          font-family: "Inter", sans-serif;
+          width: 200px;
+          margin: 0 auto;
+          padding: 15px;
+          font-size: 17px;
+          font-style: normal;
+          line-height: 143.52%;
+          letter-spacing: 0.0014em;
+          color: $white;
+        }
+        #btnP {
+          background-color: #0891B2;
+          border-radius: 10px;
+          border: none;
+          &:hover {
+            background-color: #0aa3c9;
+          }
+        }
+        #btnN {
+          background: rgb(29, 78, 216);
+          border-radius: 10px;
+          border: none;
+          &:hover {
+            background-color: rgb(47, 94, 224);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    .serv {
+      article {
+        .card {
+          width: 85%;
+        }
+      }
+    }
+  }
+}

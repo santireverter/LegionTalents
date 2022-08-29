@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+@font-face {
+  font-family: Azonix;
+  src: url(../fonts/Azonix.otf);
+  scroll-behavior: smooth;
+}
+/* SERVICIOS */
+main .serv article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  color: black;
+}
+main .serv article .card {
+  border: none;
+  text-align: center;
+  width: 380px;
+  height: 600px;
+  color: white;
+  font-size: 10px;
+  background-color: transparent;
+}
+main .serv article .card i {
+  font-size: 150px;
+  margin: 50px auto;
+}
+main .serv article .card h5 {
+  margin-left: 8px;
+}
+main .serv article .card span {
+  font-size: 15px;
+  color: #6c757d;
+  margin-left: 8px;
+}
+main .serv article .card p {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-left: 8px;
+}
+main .serv article .card button {
+  font-family: "Inter", sans-serif;
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 143.52%;
+  letter-spacing: 0.0014em;
+  color: #F6F6F6;
+}
+main .serv article .card #btnP {
+  background-color: #0891B2;
+  border-radius: 10px;
+  border: none;
+}
+main .serv article .card #btnP:hover {
+  background-color: #0aa3c9;
+}
+main .serv article .card #btnN {
+  background: rgb(29, 78, 216);
+  border-radius: 10px;
+  border: none;
+}
+main .serv article .card #btnN:hover {
+  background-color: rgb(47, 94, 224);
+}
+
+@media (max-width: 375px) {
+  main .serv article .card {
+    width: 85%;
+  }
+}
+/* NOSOTROS */
+main .nos {
+  padding-top: 20px;
+  width: 70%;
+  margin: 0 auto;
+  /* TESTIMONIOS */
+}
+main .nos .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "img h4 h4 h4" "img pp pp pp" "img num num num";
+}
+main .nos .grid h4 {
+  grid-area: h4;
+  margin: 80px 0;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+main .nos .grid p {
+  font-size: 20px;
+  grid-area: pp;
+  justify-self: center;
+  width: 80%;
+  text-align: justify;
+}
+main .nos .grid .nosImg {
+  grid-area: img;
+  width: 400px;
+  justify-self: end;
+}
+main .nos .grid .num {
+  grid-area: num;
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+}
+main .nos .grid .num div span {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 0 auto;
+}
+main .nos .testi .opB,
+main .nos .testi .opC,
+main .nos .testi .opD {
+  display: none;
+}
+main .nos .testi .opB img,
+main .nos .testi .opC img,
+main .nos .testi .opD img {
+  border-radius: 200px;
+  width: 250px;
+  height: 250px;
+}
+main .nos .testi .show {
+  display: flex;
+}
+main .nos .testi .cardB {
+  width: 90%;
+  margin: 0 auto;
+}
+main .nos .testi .cardB h5 {
+  text-align: center;
+}
+main .nos .testi .cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+  font-weight: 400;
+}
+main .nos .testi .cardBody p {
+  font-size: 25px;
+}
+main .nos .testi .cardBody .stars i {
+  margin-bottom: 30px;
+  font-size: 25px;
+  color: #a855f7;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 992px) {
+  main .nos {
+    width: 87%;
+    margin: 0 auto;
+  }
+  main .nos .grid .nosImg {
+    width: 250px;
+    margin: auto 0;
+  }
+}
+@media (max-width: 576px) {
+  main {
+    /* TESTIMONIOS */
+  }
+  main .nos {
+    width: 100%;
+  }
+  main .nos .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "pp pp pp" "num num num";
+  }
+  main .nos .grid .nosImg {
+    display: none;
+  }
+  main .nos .grid h4 {
+    display: none;
+  }
+  main .nos .grid p {
+    font-size: 20px;
+    width: 95%;
+    text-align: justify;
+  }
+  main .nos .grid .num {
+    justify-content: space-evenly;
+    gap: 7px;
+  }
+  main .nos .grid .num div span {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  main .nos .grid .num div p {
+    font-size: 18px;
+  }
+  main .testi #opB,
+main .testi #opC,
+main .testi #opD {
+    display: flex;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 25px auto;
+  }
+  main .testi .cardB {
+    background-color: #1e293b;
+  }
+  main .testi .cardB .cardBTest {
+    align-self: center;
+  }
+  main .testi .cardB .cardBTest h5 {
+    font-size: 18px;
+  }
+  main .testi .cardB .cardBTest img {
+    width: 70px;
+    height: 70px;
+  }
+  main .testi .cardB .cardBody {
+    margin-left: 10px;
+  }
+  main .testi .cardB .cardBody p {
+    font-size: 18px;
+  }
+  main .testi .cardB .cardBody .stars i {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+}
+.casco {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: "Azonix", Courier, monospace;
+  margin-bottom: 50px;
+  width: 200px;
+  text-align: center;
+}
+
+.subtitle {
+  padding-top: 100px;
+  margin-bottom: 80px;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.subtitle-sm {
+  margin: 80px 0;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .casco {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: white;
+}
+body::before {
+  background-image: url(../img/image1.png);
+  background-color: hsl(0deg, 0%, 9%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+body a {
+  color: white;
+}
+
+header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+}
+header .cambio {
+  background: linear-gradient(60deg, #64748b, #64748b);
+  animation-name: cambio;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+@keyframes cambio {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+header .navbar .container-fluid .navbar-brand img {
+  width: 60px;
+  margin-right: 20px;
+}
+header .navbar .container-fluid .navbar-brand:hover {
+  opacity: 0.7;
+}
+header .navbar .container-fluid .navbar-nav {
+  gap: 20px;
+}
+header .navbar .container-fluid .navbar-nav .nav-link {
+  color: white;
+  font-size: 20px;
+}
+header .red {
+  position: fixed;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 38px;
+}
+header .wpp {
+  width: 2px;
+  height: 30vw;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+header .wpp .icon {
+  position: relative;
+  top: 120px;
+  font-size: 40px;
+}
+header .wpp .icon i:hover {
+  color: rgb(137, 211, 27);
+  cursor: pointer;
+}
+
+main .home {
+  padding-top: 40px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .home p {
+  font-size: 32px;
+  width: 70%;
+  text-align: center;
+}
+main .home .btnArt {
+  margin-top: 80px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+main .home .btnArt .btn {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+/* FOOTER */
+footer {
+  padding-top: 40px;
+  background-color: #0f172a;
+  text-align: center;
+  z-index: 100;
+  font-weight: 100;
+}
+footer h3 {
+  margin: 0 auto;
+}
+footer .footerRedes {
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .footerRedes li {
+  list-style: none;
+}
+footer .footerRedes li a {
+  text-decoration: none;
+}
+footer .footerIcons {
+  font-size: 30px;
+}
+footer .footerIcons i {
+  padding: 7px;
+}
+
+@media (max-width: 576px) {
+  header {
+    position: sticky;
+  }
+  header .navbar-brand {
+    visibility: hidden;
+  }
+  header .red {
+    display: none;
+  }
+  main .home {
+    padding-top: 0;
+  }
+  main .home p {
+    font-size: 25px;
+    width: 90%;
+  }
+  main .home .btnArt {
+    margin-top: 40px;
+    width: 80%;
+  }
+  footer h3 {
+    font-size: 25px;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
