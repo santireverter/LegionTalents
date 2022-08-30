@@ -2,16 +2,21 @@
 
 main {
   .nos {
+    background-color: #1e293b;
     padding-top: 20px;
-    width: 70%;
-    margin: 0 auto;
+    button {
+      
+    }
     .grid {
+      width: 70%;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas:
-        "img h4 h4 h4"
-        "img pp pp pp"
-        "img num num num";
+        "ceo h4 h4 h4"
+        "ceo pp pp pp"
+        "cto num num num"
+        "cto num num num";
       h4 {
         grid-area: h4;
         margin: 80px 0;
@@ -20,22 +25,40 @@ main {
         font-weight: bold;
       }
       p {
-        font-size: 20px;
         grid-area: pp;
+        font-size: 20px;
         justify-self: center;
         width: 80%;
         text-align: justify;
       }
-      .nosImg {
-        grid-area: img;
+      .ceo {
+        grid-area: ceo;
+      }
+      .cto {
+        grid-area: cto;
+      }
+      .cardNos {
         width: 400px;
-        justify-self: end;
+        border-radius: 20px;
+        padding: 20px 0;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #131d35;
+        img {
+          width: 250px;
+          height: 250px;
+          border-radius: 200px;
+          filter: grayscale(80%);
+        }
       }
       .num {
         grid-area: num;
         display: flex;
         gap: 50px;
         justify-content: space-evenly;
+        align-items: center;
         div {
           span {
             font-size: 40px;
@@ -47,14 +70,22 @@ main {
     }
     /* TESTIMONIOS */
     .testi {
+      width: 70%;
+      margin: 0 auto;
+      background-color: #1e293b;
       .opB,
       .opC,
       .opD {
         display: none;
-        img {
+        .cara {
           border-radius: 200px;
           width: 250px;
           height: 250px;
+        }
+        .cor {
+          position: absolute;
+          top: -50px;
+          left: -70px;
         }
       }
       .show {
@@ -63,6 +94,7 @@ main {
       .cardB {
         width: 90%;
         margin: 0 auto;
+        position: relative;
         h5 {
           text-align: center;
         }
@@ -93,14 +125,7 @@ main {
 @media (max-width: 992px) {
   main {
     .nos {
-      width: 87%;
       margin: 0 auto;
-      .grid {
-        .nosImg {
-          width: 250px;
-          margin: auto 0;
-        }
-      }
     }
   }
 }
@@ -108,16 +133,18 @@ main {
 @media (max-width: 576px) {
   main {
     .nos {
-      width: 100%;
+
+      button {
+        display: none;
+      }
       .grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
           "pp pp pp"
-          "num num num";
-        .nosImg {
-          display: none;
-        }
+          "num num num"
+          "ceo ceo ceo"
+          "cto cto cto";
         h4 {
           display: none;
         }
@@ -139,6 +166,10 @@ main {
             }
           }
         }
+        .cardNos {
+          justify-self: center;
+          width: 380px;
+        }
       }
     }
     /* TESTIMONIOS */
@@ -149,10 +180,15 @@ main {
         display: flex;
         padding: 10px;
         border-radius: 20px;
-        margin: 25px auto;
+        .cor {
+          display: none;
+        }
+        .cara {
+          width: 70px;
+          height: 70px;
+        }
       }
       .cardB {
-        background-color: #1e293b;
         .cardBTest {
           align-self: center;
           h5 {
@@ -169,12 +205,23 @@ main {
             font-size: 18px;
           }
           .stars {
-            
             i {
               margin-bottom: 10px;
               font-size: 15px;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    .nos {
+      .grid {
+        .cardNos {
+          width: 90%;
         }
       }
     }
