@@ -86,14 +86,7 @@ main .nos .grid {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "ceo h4 h4 h4" "ceo pp pp pp" "cto num num num" "cto num num num";
-}
-main .nos .grid h4 {
-  grid-area: h4;
-  margin: 80px 0;
-  font-size: 30px;
-  text-align: center;
-  font-weight: bold;
+  grid-template-areas: "pp pp pp pp" "ceo ceo cto cto";
 }
 main .nos .grid p {
   grid-area: pp;
@@ -115,8 +108,8 @@ main .nos .grid .cardNos {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   align-items: center;
-  background-color: #131d35;
 }
 main .nos .grid .cardNos img {
   width: 250px;
@@ -141,6 +134,11 @@ main .nos .testi {
   margin: 0 auto;
   background-color: #1e293b;
 }
+main .nos .testi .points {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 main .nos .testi .opB,
 main .nos .testi .opC,
 main .nos .testi .opD {
@@ -157,16 +155,31 @@ main .nos .testi .opB .cor,
 main .nos .testi .opC .cor,
 main .nos .testi .opD .cor {
   position: absolute;
-  top: -50px;
+  top: 0;
   left: -70px;
 }
 main .nos .testi .show {
   display: flex;
+  animation-name: slide;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 main .nos .testi .cardB {
   width: 90%;
+  height: 400px;
   margin: 0 auto;
   position: relative;
+}
+main .nos .testi .cardB .cardBTest {
+  align-self: center;
 }
 main .nos .testi .cardB h5 {
   text-align: center;
@@ -192,13 +205,32 @@ main .nos .testi .cardBody .stars i {
   main .nos {
     margin: 0 auto;
   }
+  main .nos .grid {
+    width: 100%;
+  }
+  main .nos .grid .cardNos {
+    width: 250px;
+  }
+  main .nos .testi {
+    width: 90%;
+  }
+  main .nos .testi .cardB {
+    width: 90%;
+  }
+  main .nos .testi .cardB .cardBody {
+    margin-left: 50px;
+  }
+  main .nos .testi .cardB .cardBody p {
+    font-size: 20px;
+  }
 }
 @media (max-width: 576px) {
-  main {
-    /* TESTIMONIOS */
+  main .serv {
+    background-color: #0F172A;
   }
-  main .nos button {
-    display: none;
+  main .nos {
+    background-color: #0F172A;
+    /* TESTIMONIOS */
   }
   main .nos .grid {
     display: grid;
@@ -227,44 +259,67 @@ main .nos .testi .cardBody .stars i {
   main .nos .grid .cardNos {
     justify-self: center;
     width: 380px;
+    background-color: #131d35;
   }
-  main .testi #opB,
-main .testi #opC,
-main .testi #opD {
+  main .nos .testi {
+    background-color: #0F172A;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  main .nos .testi .points {
+    display: none;
+  }
+  main .nos .testi #opB,
+main .nos .testi #opC,
+main .nos .testi #opD {
     display: flex;
     padding: 10px;
     border-radius: 20px;
   }
-  main .testi #opB .cor,
-main .testi #opC .cor,
-main .testi #opD .cor {
+  main .nos .testi #opB .cor,
+main .nos .testi #opC .cor,
+main .nos .testi #opD .cor {
     display: none;
   }
-  main .testi #opB .cara,
-main .testi #opC .cara,
-main .testi #opD .cara {
+  main .nos .testi #opB .cara,
+main .nos .testi #opC .cara,
+main .nos .testi #opD .cara {
     width: 70px;
     height: 70px;
   }
-  main .testi .cardB .cardBTest {
+  main .nos .testi .cardB {
+    height: auto;
+    margin-top: 20px;
+    background-color: #1E293B;
+  }
+  main .nos .testi .cardB .cardBTest {
     align-self: center;
   }
-  main .testi .cardB .cardBTest h5 {
+  main .nos .testi .cardB .cardBTest h5 {
     font-size: 18px;
   }
-  main .testi .cardB .cardBTest img {
+  main .nos .testi .cardB .cardBTest img {
     width: 70px;
     height: 70px;
   }
-  main .testi .cardB .cardBody {
+  main .nos .testi .cardB .cardBody {
     margin-left: 10px;
   }
-  main .testi .cardB .cardBody p {
+  main .nos .testi .cardB .cardBody p {
     font-size: 18px;
   }
-  main .testi .cardB .cardBody .stars i {
+  main .nos .testi .cardB .cardBody .stars i {
     margin-bottom: 10px;
     font-size: 15px;
+  }
+  main .contacto {
+    background-color: #0F172A;
   }
 }
 @media (max-width: 425px) {
@@ -272,6 +327,26 @@ main .testi #opD .cara {
     width: 90%;
   }
 }
+main .homeEmp {
+  padding-top: 100PX;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+main .homeEmp img {
+  width: 50%;
+}
+main .homeEmp P {
+  margin-right: 20px;
+  font-size: 1.35em;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 2.5em;
+  align-self: center;
+}
+
 .casco {
   width: 200px;
   margin-bottom: 20px;
@@ -297,6 +372,12 @@ main .testi #opD .cara {
   font-size: 30px;
   text-align: center;
   font-weight: 600;
+}
+
+.navbar-collapse.collapse.show {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
 }
 
 @media (max-width: 576px) {
@@ -363,32 +444,30 @@ header .navbar .container-fluid .navbar-nav .nav-link {
   color: white;
   font-size: 20px;
 }
-header .red {
+
+.wpp {
   position: fixed;
   right: 0;
   margin-right: 50px;
   margin-top: 38px;
+  z-index: 10;
 }
-header .wpp {
-  width: 2px;
-  height: 30vw;
-  background-color: white;
+.wpp .icon {
+  height: 90vh;
   display: flex;
+  justify-content: flex-end;
   align-items: flex-end;
-  justify-content: center;
+  font-size: 60px;
 }
-header .wpp .icon {
-  position: relative;
-  top: 120px;
-  font-size: 40px;
+.wpp .icon i {
+  color: #E2E8F0;
 }
-header .wpp .icon i:hover {
-  color: rgb(137, 211, 27);
+.wpp .icon i:hover {
+  color: #1CCC41;
   cursor: pointer;
 }
 
 main .home {
-  padding-top: 40px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -399,10 +478,10 @@ main .home {
 main .home .blur {
   position: absolute;
   left: 0;
-  width: 44vw;
-  height: 100.8vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(158, 156, 156, 0.1490196078);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
   opacity: 0.8;
   z-index: -1;
 }
@@ -431,7 +510,7 @@ main .home .btnArt .btn {
 
 /* CONTACTO */
 .contacto {
-  background-color: #1E293B;
+  background-color: #1e293b;
 }
 .contacto .form {
   display: flex;
@@ -452,7 +531,7 @@ main .home .btnArt .btn {
   color: #fff;
 }
 .contacto .formulario input::placeholder {
-  color: #F1F5F9;
+  color: #f1f5f9;
 }
 .contacto .formulario textarea {
   height: auto;
@@ -471,9 +550,6 @@ main .home .btnArt .btn {
   height: 90px;
   width: 230px;
   border-radius: 10px;
-  background-color: #1e293b;
-  border: solid #fff 1px;
-  color: #fff;
 }
 
 /* FOOTER */
@@ -501,10 +577,17 @@ footer .footerRedes li a {
 }
 footer .footerIcons {
   font-size: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 footer .footerIcons i {
   padding: 7px;
+}
+footer .copy {
+  padding-bottom: 30px;
+  letter-spacing: 0.4px;
+}
+footer .copy span {
+  font-weight: 600;
 }
 
 @media (max-width: 992px) {
@@ -518,20 +601,20 @@ footer .footerIcons i {
   }
 }
 @media (max-width: 576px) {
-  header {
-    position: sticky;
-  }
-  header .navbar-brand {
-    visibility: hidden;
-  }
   header .red {
     display: none;
   }
+  .wpp {
+    margin-right: 30px;
+  }
+  .wpp .icon {
+    height: 93vh;
+    font-size: 45px;
+  }
   main .home {
     padding-top: 0;
-  }
-  main .home .blur {
-    display: none;
+    align-items: center;
+    height: 100vh;
   }
   main .home p {
     font-size: 25px;

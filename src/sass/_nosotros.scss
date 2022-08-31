@@ -4,26 +4,14 @@ main {
   .nos {
     background-color: #1e293b;
     padding-top: 20px;
-    button {
-      
-    }
     .grid {
       width: 70%;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas:
-        "ceo h4 h4 h4"
-        "ceo pp pp pp"
-        "cto num num num"
-        "cto num num num";
-      h4 {
-        grid-area: h4;
-        margin: 80px 0;
-        font-size: 30px;
-        text-align: center;
-        font-weight: bold;
-      }
+        "pp pp pp pp"
+        "ceo ceo cto cto";
       p {
         grid-area: pp;
         font-size: 20px;
@@ -44,8 +32,9 @@ main {
         margin: 20px 0;
         display: flex;
         flex-direction: column;
+        justify-self: center;
         align-items: center;
-        background-color: #131d35;
+        
         img {
           width: 250px;
           height: 250px;
@@ -73,6 +62,11 @@ main {
       width: 70%;
       margin: 0 auto;
       background-color: #1e293b;
+      .points {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
       .opB,
       .opC,
       .opD {
@@ -84,17 +78,28 @@ main {
         }
         .cor {
           position: absolute;
-          top: -50px;
+          top: 0;
           left: -70px;
         }
       }
       .show {
         display: flex;
+        animation-name: slide;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes slide {
+        0% {opacity: 0;}
+        100% {opacity: 100%;}
       }
       .cardB {
         width: 90%;
+        height: 400px;
         margin: 0 auto;
         position: relative;
+        .cardBTest {
+          align-self: center;
+        }
         h5 {
           text-align: center;
         }
@@ -126,17 +131,35 @@ main {
   main {
     .nos {
       margin: 0 auto;
+      .grid {
+        width: 100%;
+        .cardNos {
+          width: 250px;
+        }
+      }
+      .testi {
+        width: 90%;
+        .cardB {
+          width: 90%;
+          .cardBody {
+            margin-left: 50px;
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 @media (max-width: 576px) {
   main {
+    .serv {
+      background-color: #0F172A;
+    }
     .nos {
-
-      button {
-        display: none;
-      }
+      background-color: #0F172A;
       .grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -169,49 +192,64 @@ main {
         .cardNos {
           justify-self: center;
           width: 380px;
+          background-color: #131d35;
         }
       }
-    }
-    /* TESTIMONIOS */
-    .testi {
-      #opB,
-      #opC,
-      #opD {
-        display: flex;
-        padding: 10px;
-        border-radius: 20px;
-        .cor {
+      /* TESTIMONIOS */
+      .testi {
+        background-color: #0F172A;
+        @keyframes slide {
+          0% {opacity: 100%;}
+          100% {opacity: 100%;}
+        }
+        .points {
           display: none;
         }
-        .cara {
-          width: 70px;
-          height: 70px;
-        }
-      }
-      .cardB {
-        .cardBTest {
-          align-self: center;
-          h5 {
-            font-size: 18px;
+        #opB,
+        #opC,
+        #opD {
+          display: flex;
+          padding: 10px;
+          border-radius: 20px;
+          .cor {
+            display: none;
           }
-          img {
+          .cara {
             width: 70px;
             height: 70px;
           }
         }
-        .cardBody {
-          margin-left: 10px;
-          p {
-            font-size: 18px;
+        .cardB {
+          height: auto;
+          margin-top: 20px;
+          background-color: #1E293B;
+          .cardBTest {
+            align-self: center;
+            h5 {
+              font-size: 18px;
+            }
+            img {
+              width: 70px;
+              height: 70px;
+            }
           }
-          .stars {
-            i {
-              margin-bottom: 10px;
-              font-size: 15px;
+          .cardBody {
+            margin-left: 10px;
+            p {
+              font-size: 18px;
+            }
+            .stars {
+              i {
+                margin-bottom: 10px;
+                font-size: 15px;
+              }
             }
           }
         }
       }
+    }
+    .contacto {
+      background-color: #0F172A;
     }
   }
 }

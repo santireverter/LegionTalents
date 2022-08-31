@@ -1,8 +1,8 @@
 @import "entradas";
 @import "servicios";
 @import "nosotros";
+@import "empresa";
 @import "clases";
-
 
 * {
   font-family: "Poppins", sans-serif;
@@ -34,7 +34,7 @@ header {
   position: fixed;
   width: 100%;
   .cambio {
-    background: linear-gradient(#1E1D1D80, #A1A1A136);
+    background: linear-gradient(#1e1d1d80, #a1a1a136);
     animation-name: cambio;
     animation-duration: 0.3s;
     animation-timing-function: linear;
@@ -67,28 +67,26 @@ header {
       }
     }
   }
-  .red {
-    position: fixed;
-    right: 0;
-    margin-right: 50px;
-    margin-top: 38px;
-  }
-  .wpp {
-    width: 2px;
-    height: 30vw;
-    background-color: white;
+}
+
+.wpp {
+  position: fixed;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 38px;
+  z-index: 10;
+  .icon {
+    height: 90vh;
     display: flex;
+    justify-content: flex-end;
     align-items: flex-end;
-    justify-content: center;
-    .icon {
-      position: relative;
-      top: 120px;
-      font-size: 40px;
-      i {
-        &:hover {
-          color: rgb(137, 211, 27);
-          cursor: pointer;
-        }
+    font-size: 60px;
+    i {
+      color: #E2E8F0;
+      &:hover {
+        // color: rgb(137, 211, 27); color anterior
+        color: #1CCC41;
+        cursor: pointer;
       }
     }
   }
@@ -96,7 +94,6 @@ header {
 
 main {
   .home {
-    padding-top: 40px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -106,10 +103,10 @@ main {
     .blur {
       position: absolute;
       left: 0;
-      width: 44vw;
-      height: 100.8vh;
-      background-color: #9E9C9C26 ;
-      backdrop-filter: blur(6px);
+      width: 100%;
+      height: 100%;
+      background-color: #9e9c9c26;
+      backdrop-filter: blur(8px);
       opacity: 0.8;
       z-index: -1;
     }
@@ -138,31 +135,31 @@ main {
   }
 }
 
-/* CONTACTO */ 
+/* CONTACTO */
 
 .contacto {
-  background-color: #1E293B;
-  .form{
+  background-color: #1e293b;
+  .form {
     display: flex;
     flex-direction: column;
   }
-  .formulario{
+  .formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
-    input{
+    input {
       height: 60px;
-      margin: 25px 0px ;
+      margin: 25px 0px;
       border-radius: 5px;
       background-color: #1e293b;
       border: solid #fff 1px;
       padding-left: 30px;
       color: #fff;
-      &::placeholder{
-        color: #F1F5F9;
+      &::placeholder {
+        color: #f1f5f9;
       }
     }
-    textarea{
+    textarea {
       height: auto;
       margin: 25px 0px;
       border-radius: 5px;
@@ -170,22 +167,18 @@ main {
       border: solid #fff 1px;
       padding: 10px 0px 0px 30px;
       color: #fff;
-      &::placeholder{
+      &::placeholder {
         color: #fff;
       }
     }
-    button{
+    button {
       margin: 25px 0px 70px 0px;
       height: 90px;
       width: 230px;
       border-radius: 10px;
-      background-color: #1e293b;
-      border: solid #fff 1px;
-      color: #fff;
     }
   }
 }
-
 
 /* FOOTER */
 
@@ -212,9 +205,17 @@ footer {
   }
   .footerIcons {
     font-size: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     i {
       padding: 7px;
+    }
+  }
+
+  .copy {
+    padding-bottom: 30px;
+    letter-spacing: 0.4px;
+    span {
+      font-weight: 600;
     }
   }
 }
@@ -241,21 +242,24 @@ footer {
 
 @media (max-width: 576px) {
   header {
-    position: sticky;
-    .navbar-brand {
-      visibility: hidden;
-    }
     .red {
       display: none;
+    }
+  }
+
+  .wpp {
+    margin-right: 30px;
+    .icon {
+      height: 93vh;
+      font-size: 45px;
     }
   }
 
   main {
     .home {
       padding-top: 0;
-      .blur {
-        display: none;
-      }
+      align-items: center;
+      height: 100vh;
       p {
         font-size: 25px;
         width: 90%;

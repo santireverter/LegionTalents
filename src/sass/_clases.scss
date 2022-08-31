@@ -23,6 +23,11 @@
   text-align: center;
   font-weight: 600;
 }
+.navbar-collapse.collapse.show {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+}
 
 @media (max-width: 576px) {
   .casco {
