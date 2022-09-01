@@ -14,40 +14,115 @@
   ></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark navServ">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html"
-              ><img src="../src/img/ico.png" alt=""
-            /></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link" href="../index.html">Home</a>
-                <a class="nav-link" href="servicios.html">Servicios</a>
-                <a class="nav-link" href="nosotros.html">Nosotros</a>
-                <a class="nav-link" href="contacto.html">Contacto</a>
+  <header>
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"
+          ><img src="../src/img/ico.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#serv">Servicios</a>
+            <a class="nav-link" href="#nos">Nosotros</a>
+            <a class="nav-link" href="#cont">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+      <main>
+        <section id="introduccion">
+          <h3 class="subtitle">¿BUSCAS POTENCIAR TU PERFIL PROFESIONAL?</h3>
+          <div class="mainPerfilPersonal">
+            <img src="../src/img/imagenPerfilPersonal.png" alt="Persona viendo Planilla">
+            <div class="textPerfilPersonal">
+              <p>TE ASESORAMOS CON EL ARMADO DE CV Y TE AYUDAMOS A POTENCIAR TU PERFIL DE LINKEDIN PARA QUE ENCUENTRES TU
+                TRABAJO SOÑADO.</p>
+              <p>NUESTRO KIT TOPE DE GAMA TE PERMITIRA TENER UN MEER DE 30' MIN CON NOSOTROS PARA EVACUAR DUDAS SOBRE EL
+                PROCESO Y CONOCER MEJOR TU PERFIL.</p>
+              <button>AGENDAR UNA CONSULTA</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="nuestrosPlanes">
+          <h3 class="subtitle">CONOCE NUESTROS PLANES</h3>
+          <div class="contenedorCards">
+            <div class="cardProducto">
+              <div class="cardTitulo">
+                <img src="../src/img/VectoriconoCoronalTriunfal.png" alt="Corona Triunfal">
+                <h6>KIT LEGENDARIO</h6>
+                <img src="../src/img/VectoriconoCoronalTriunfal.png" alt="Corona Triunfal">
+              </div>
+              <div>
+                <p>LA VERSION BASICA PARA QUIENES RECIEN ESTAN ARRANCANDO</p>
+                <ul>
+                  <li>REVISION DE CV</li>
+                  <li>BANNER PARA PERFIL DE LINKEDIN</li>
+                  <li>FIRMA PROFESIONAL PARA MAIL</li>
+                </ul>
+              </div>
+              <div>
+                <p class="cardPrecio">$1000 ARS</p>
+                <button>CONSULTA GRATUITA</button>
+              </div>
+            </div>
+            <div class="cardProducto">
+              <div class="cardTitulo">
+                <img src="../src/img/VectoriconoCoronalTriunfal.png" alt="Corona Triunfal">
+                <h6>KIT CESAR</h6>
+                <img src="../src/img/VectoriconoCoronalTriunfal.png" alt="Corona Triunfal"></div>
+                <div>
+                  <p>LA VERSION ATR PARA QUIENES QUIEREN CONQUISTARLO TODO</p>
+                  <ul>
+                    <li>BANNER PARA PERFIL DE LINKEDIN</li>
+                    <li>FIRMA PROFESIONAL PARA MAIL</li>
+                    <li>REVISION DE PERFIL PARA LINKEDIN</li>
+                    <li>ARMADO DE CV DESDE 0</li>
+                  </ul>
+                </div>
+              <div class="cardPrecio">
+                <p>$3000 ARS</p>
+                <button>CONSULTA GRATUITA</button>
+              </div>
+            </div>
+            <div class="cardProducto">
+              <div class="cardTitulo">               
+                <img src="../src/img/VectoriconoCoronalTriunfal.png" alt="Corona Triunfal">
+                <h6>KIT CENTURION</h6>
+                <img src="../src/img/VectoriconoCoronalTriunfal.png" alt="Corona Triunfal"></div>
+                <div>
+                  <p>LA VERSION INTERMEDIA PARA QUIENES QUE TIENEN UNA ESTRATEGIA EN MENTE</p>
+                  <ul>
+                    <li>REVISION DE CV</li>
+                    <li>BANNER PARA PERFIL DE LINKEDIN</li>
+                    <li>FIRMA PROFESIONAL PARA MAIL</li>
+                    <li>REVISION DE PERFIL PARA LINKEDIN</li>
+                  </ul>
+                </div>
+              <div class="cardPrecio">
+                <p>$2000 ARS</p>
+                <button>CONSULTA GRATUITA</button>
               </div>
             </div>
           </div>
-        </nav>
-        <div class="red">
-          <div class="wpp">
-            <div class="icon"> <a href="https://wa.me/5493512077580""><i class="fa-brands fa-whatsapp"></i></a> </div>
-          </div>
-        </div>
-      </header>
+        </section>
+        </main>
 
       <script src="../src/boots/js/bootstrap.bundle.min.js"></script>
+      <script src="../src/script.js"></script>
 </body>
 </html>

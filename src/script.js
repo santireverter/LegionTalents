@@ -8,7 +8,7 @@ window.onscroll = function () {
 };
 
 function headerColor() {
-  if (document.documentElement.scrollTop > 70) {
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
     navbar.classList.add("cambio");
   } else {
     navbar.classList.remove("cambio");
