@@ -244,7 +244,10 @@ footer {
     border-radius: 5px;
     border: #0891B2;
     padding: 16px 32px;
-    ;
+    margin: 10px;
+    // &:hover{
+    //   border: solid #340561 2px;
+    // }
   }
 }
 .contenedorCards{
@@ -254,14 +257,18 @@ footer {
   justify-content: center;
 }
 .cardProducto{
+  height: 480px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 25px;
+  padding:0px 30px;
   background-color: #E2E8F0;
   border: solid 1px;
   border-color: #340561;
+  border-radius: 5px;
   p{
     color: #000;
   }
@@ -272,18 +279,70 @@ footer {
 .cardTitulo{
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   background-color: #fff;
+  width: 397px;
+  height: 68px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   h6{
     color: #000;
+    font-weight: 600;
   }
+}
+.imagenInvertida{
+  transform: rotateY(180deg);
 }
 .cardPrecio{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
+.buttonKit{
+  border: solid 2px #0891B2;
+  height: 65px;
+  width: 257px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  &:hover{
+    transition: 0.2s;
+    color: #fff;
+    background-color: #0891B2;
+  }
+}
+.buttonKitActivo{
+  color: #fff;
+  background-color: #0891B2;
+  height: 65px;
+  width: 257px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  // &:hover{
+  //   border: solid #fff 2px;
+  // }
+}
+.buttonPromo{
+  background-color: transparent;
+  color: #fff;
+  border: solid 2px #0891B2;
+  height: 65px;
+  width: 257px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  &:hover{
+    transition: 0.2s;
+    color: #fff;
+    background-color: #0891B2;
+  }
+}
+.promoExtranjero{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 @media (max-width: 992px) {
   main {
     .home {
