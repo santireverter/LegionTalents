@@ -1,21 +1,53 @@
 main {
     .homeEmp {
-        padding-top: 100PX;
+        padding-top: 100px;
         width: 80%;
         margin: 0 auto;
         justify-content: center;
         align-items: center;
         display: flex;
-        img {
-            width: 50%;
-        }
-        P {
-            margin-right: 20px;
-            font-size: 1.35em;
-            font-weight: 300;
-            text-align: justify;
-            line-height: 2.5em;
-            align-self: center;
+        flex-direction: column;
+        
+        .texto {
+            display: flex;
+            img {
+                width: 500px;
+            }
+            P {
+                font-size: 1.35em;
+                font-weight: 300;
+                text-align: justify;
+                line-height: 2.5em;
+                align-self: center;
+                margin-bottom: 0;
+                margin-right: 50px;
+                &:last-child {
+                    margin-top: 1em;
+                }
+            }
         }
     }
+    .nuestrosPlanes {
+        .contenedorCards {
+            .cardProducto {
+                width: 50px;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        .homeEmp {
+            .texto {
+                display: flex;
+                flex-wrap: wrap;
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    
 }

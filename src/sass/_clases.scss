@@ -13,7 +13,7 @@
 .subtitle {
   padding-top: 100px;
   margin-bottom: 80px;
-  font-size: 50px;
+  font-size: 3em;
   text-align: center;
   font-weight: bold;
 }
@@ -23,15 +23,44 @@
   text-align: center;
   font-weight: 600;
 }
-.navbar-collapse.collapse.show {
-  width: 100vw;
-  height: 100vh;
-  background-color: red;
+.show-nav {
+  animation-name: show-nav;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes show-nav {
+  100% {left: 0;}
+}
+.hide-nav {
+  animation-name: hide-nav;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes hide-nav {
+  0% {left: 0px;}
+  100% {left: 400px;}
+}
+#btn-close {
+  display: none;
 }
 
 @media (max-width: 576px) {
+  #btn-close {
+    display: block;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 25px;
+    background-color: transparent;
+    color: white;
+    border: none;
+  }
   .casco {
     width: 150px;
     margin-bottom: 20px;
+  }
+  .subtitle {
+    font-size: 2em;
   }
 }

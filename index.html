@@ -16,38 +16,24 @@
 
   <body>
     <header>
-      <nav id="navbar" class="navbar navbar-expand-sm navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img src="src/img/ico.png" alt="logo"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" href="#home">Home</a>
-              <a class="nav-link" href="#serv">Servicios</a>
-              <a class="nav-link" href="#nos">Nosotros</a>
-              <a class="nav-link" href="#cont">Contacto</a>
-            </div>
-          </div>
-        </div>
+      <nav id="navbar">
+        <i id="nav-btn" class="fa-solid fa-bars"></i>
+        <a class="logoMobile" href="index.html"><img class="logoMobile" src="src/img/logo home.png" alt="logo"></a>
+        <a class="logoPc" href="index.html"><img class="logoPc" src="src/img/ico.png" alt="logo" /></a>
+        <ul id="nav-ul">
+          
+          <li><a onclick="clickClose()" href="#home">Home</a></li>
+          <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
+          <li><a onclick="clickClose()" href="#nos">Nosotros</a></li>
+          <li><a onclick="clickClose()" href="#cont">Contacto</a></li>
+        </ul>
       </nav>
     </header>
 
     <div class="wpp">
       <div class="icon">
         <a href="https://wa.me/5493512077580"
-          ><i class="fa-brands fa-whatsapp"></i
+          ><img src="src/img/wpp icon.png" alt=""></i
         ></a>
       </div>
     </div>
@@ -221,7 +207,7 @@
           <form action="" class="formulario row">
             <input type="text" placeholder="Nombre y apellido" class="col-9 align-self-center" />
             <input type="email" placeholder="Correo electronico" class="col-9 align-self-center" />
-            <textareaname="" id="" rows="10" placeholder="Mensaje" class="col-9 align-self-center"></textarea>
+            <textarea name="" id="" rows="10" placeholder="Mensaje" class="col-9 align-self-center"></textarea>
               <button class="btn btn-outline-primary col-6 align-self-center">
                 Enviar
               </button>

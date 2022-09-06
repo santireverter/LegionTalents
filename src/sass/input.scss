@@ -47,22 +47,41 @@ header {
       }
     }
   }
-  .navbar {
-    .container-fluid {
-      .navbar-brand {
-        img {
-          width: 60px;
-          margin-right: 20px;
-        }
-        &:hover {
-          opacity: 0.7;
-        }
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    .fa-bars {
+      display: none;
+    }
+    .logoPc {
+      width: 70px;
+      height: 70px;
+      margin-right: 20px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
       }
-      .navbar-nav {
-        gap: 20px;
-        .nav-link {
+    }
+    .logoMobile {
+      display: none;
+      width: 70px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 0;
+    }
+    li {
+      list-style: none;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        &:hover {
           color: white;
-          font-size: 20px;
+          opacity: 0.7;
         }
       }
     }
@@ -81,12 +100,13 @@ header {
     justify-content: flex-end;
     align-items: flex-end;
     font-size: 60px;
-    i {
-      color: #E2E8F0;
-      &:hover {
-        // color: rgb(137, 211, 27); color anterior
-        color: #1CCC41;
-        cursor: pointer;
+    a {
+      img {
+        border-radius: 250px;
+        width: 50px;
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -102,9 +122,10 @@ main {
     z-index: 2;
     .blur {
       position: absolute;
+      top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 110%;
       background-color: #9e9c9c26;
       backdrop-filter: blur(8px);
       opacity: 0.8;
@@ -200,6 +221,10 @@ footer {
       list-style: none;
       a {
         text-decoration: none;
+        &:hover {
+          color: white;
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -221,28 +246,28 @@ footer {
 }
 
 /* Pagina Persona */
-.mainPerfilPersonal{
+.mainPerfilPersonal {
   display: flex;
   flex-flow: row nowrap;
-  img{
+  img {
     margin: 25px 25px 25px 80px;
   }
 }
-.textPerfilPersonal{
+.textPerfilPersonal {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   margin: 25px 80px 25px 25px;
-  p{
+  p {
     font-size: 25px;
     padding: 10px;
   }
-  button{
-    background-color: #0891B2;
+  button {
+    background-color: #0891b2;
     color: #ffffff;
     border-radius: 5px;
-    border: #0891B2;
+    border: #0891b2;
     padding: 16px 32px;
     margin: 10px;
     // &:hover{
@@ -250,70 +275,70 @@ footer {
     // }
   }
 }
-.contenedorCards{
+.contenedorCards {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
 }
-.cardProducto{
+.cardProducto {
   height: 480px;
-  width: 400px;
+  width: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 25px;
-  padding:0px 30px;
-  background-color: #E2E8F0;
+  padding: 0px 30px;
+  background-color: #e2e8f0;
   border: solid 1px;
   border-color: #340561;
   border-radius: 5px;
-  p{
+  p {
     color: #000;
   }
-  li{
+  li {
     color: #000;
   }
 }
-.cardTitulo{
+.cardTitulo {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
-  width: 397px;
+  width: 378px;
   height: 68px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  h6{
+  h6 {
     color: #000;
     font-weight: 600;
   }
 }
-.imagenInvertida{
+.imagenInvertida {
   transform: rotateY(180deg);
 }
-.cardPrecio{
+.cardPrecio {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.buttonKit{
-  border: solid 2px #0891B2;
+.buttonKit {
+  border: solid 2px #0891b2;
   height: 65px;
   width: 257px;
   margin-bottom: 20px;
   border-radius: 5px;
-  &:hover{
+  &:hover {
     transition: 0.2s;
     color: #fff;
-    background-color: #0891B2;
+    background-color: #0891b2;
   }
 }
-.buttonKitActivo{
+.buttonKitActivo {
   color: #fff;
-  background-color: #0891B2;
+  background-color: #0891b2;
   height: 65px;
   width: 257px;
   margin-bottom: 20px;
@@ -323,21 +348,21 @@ footer {
   //   border: solid #fff 2px;
   // }
 }
-.buttonPromo{
+.buttonPromo {
   background-color: transparent;
   color: #fff;
-  border: solid 2px #0891B2;
+  border: solid 2px #0891b2;
   height: 65px;
   width: 257px;
   margin-bottom: 20px;
   border-radius: 5px;
-  &:hover{
+  &:hover {
     transition: 0.2s;
     color: #fff;
-    background-color: #0891B2;
+    background-color: #0891b2;
   }
 }
-.promoExtranjero{
+.promoExtranjero {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -365,16 +390,50 @@ footer {
 
 @media (max-width: 576px) {
   header {
-    .red {
-      display: none;
+    z-index: 20;
+    nav {
+      padding: 5px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      .fa-bars {
+        display: block;
+        font-size: 25px;
+        padding: 20px;
+      }
+      .logoPc {
+        display: none;
+      }
+      .logoMobile {
+        display: block;
+      }
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 400px;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        background-color: #0f172a;
+      }
     }
   }
 
   .wpp {
     margin-right: 30px;
     .icon {
-      height: 93vh;
+      height: 90vh;
       font-size: 45px;
+      a {
+        img {
+          border-radius: 250px;
+          width: 50px;
+        }
+      }
     }
   }
 
@@ -392,6 +451,10 @@ footer {
         width: 85%;
       }
     }
+  }
+
+  .promoExtranjero {
+    flex-direction: column;
   }
 
   footer {
