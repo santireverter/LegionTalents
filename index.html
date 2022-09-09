@@ -18,13 +18,17 @@
     <header>
       <nav id="navbar">
         <i id="nav-btn" class="fa-solid fa-bars"></i>
-        <a class="logoMobile" href="index.html"><img class="logoMobile" src="src/img/logo home.png" alt="logo"></a>
-        <a class="logoPc" href="index.html"><img class="logoPc" src="src/img/ico.png" alt="logo" /></a>
+        <a class="logoMobile" href="index.html"
+          ><img class="logoMobile" src="src/img/logo home.png" alt="logo"
+        /></a>
+        <a class="logoPc" href="index.html"
+          ><img class="logoPc" src="src/img/ico.png" alt="logo"
+        /></a>
         <ul id="nav-ul">
-          
           <li><a onclick="clickClose()" href="#home">Home</a></li>
           <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
           <li><a onclick="clickClose()" href="#nos">Nosotros</a></li>
+          <li><a onclick="clickClose()" href="#testi">Testimonios</a></li>
           <li><a onclick="clickClose()" href="#cont">Contacto</a></li>
         </ul>
       </nav>
@@ -33,8 +37,8 @@
     <div class="wpp">
       <div class="icon">
         <a href="https://wa.me/5493512077580"
-          ><img src="src/img/wpp icon.png" alt=""></i
-        ></a>
+          ><img src="src/img/wpp icon.png" alt=""
+        /></a>
       </div>
     </div>
 
@@ -125,10 +129,10 @@
             72 hs para presentar postulantes a nuestros clientes.
           </p>
         </div>
-        <section class="testi">
+        <section id="testi" class="testi">
           <h4 class="subtitle-sm">TESTIMONIOS</h4>
 
-          <div id="opB" class="cardB opB show">         
+          <div id="opB" class="cardB opB show">
             <div class="cardBTest">
               <img class="cor" src="src/img/“.png" alt="corchetes" />
               <img class="cara" src="src/img/Ellipse 1.png" alt="Anibal S" />
@@ -204,17 +208,40 @@
         <h3 class="subtitle">CONTACTO</h3>
         <h4 class="subtitle-sm">¿COMO PODEMOS AYUDARTE?</h4>
         <div class="form container-fluid">
-          <form action="" class="formulario row">
-            <input type="text" placeholder="Nombre y apellido" class="col-9 align-self-center" />
-            <input type="email" placeholder="Correo electronico" class="col-9 align-self-center" />
-            <textarea name="" id="" rows="10" placeholder="Mensaje" class="col-9 align-self-center"></textarea>
-              <button class="btn btn-outline-primary col-6 align-self-center">
-                Enviar
-              </button>
+          <form
+            action="https://formsubmit.co/mail@gmail.com"
+            method="POST"
+            class="formulario row"
+          >
+            <input
+              type="text"
+              placeholder="Nombre y apellido"
+              class="col-9 align-self-center"
+            />
+
+            <input
+              type="email"
+              placeholder="Correo electronico"
+              class="col-9 align-self-center"
+            />
+
+            <textarea
+              name="comment"
+              id=""
+              rows="10"
+              placeholder="Mensaje"
+              class="col-9 align-self-center"
+            ></textarea>
+
+            <input
+              type="submit"
+              class="col-6 align-self-center"
+              value="Enviar"
+            />
           </form>
         </div>
       </section>
-      </main>
+    </main>
 
     <footer>
       <img src="src/img/ico.png" alt="casco" class="casco" />
@@ -223,6 +250,7 @@
         <li><a href="#home">Inicio</a></li>
         <li><a href="#serv">Servicios</a></li>
         <li><a href="#nos">Nosotros</a></li>
+        <li><a href="#testi">Testimonios</a></li>
         <li><a href="#cont">Contacto</a></li>
       </ul>
       <div class="footerIcons">

@@ -327,7 +327,10 @@ main .nos .testi #opD .cara {
     width: 90%;
   }
 }
-main .homeEmp {
+.empresaMain {
+  background-color: #1e293b;
+}
+.empresaMain .homeEmp {
   padding-top: 100px;
   width: 80%;
   margin: 0 auto;
@@ -336,14 +339,16 @@ main .homeEmp {
   display: flex;
   flex-direction: column;
 }
-main .homeEmp .texto {
+.empresaMain .homeEmp .texto {
   display: flex;
+  margin-bottom: 10em;
 }
-main .homeEmp .texto img {
-  width: 500px;
+.empresaMain .homeEmp .texto img {
+  max-width: 600px;
+  height: 400px;
 }
-main .homeEmp .texto P {
-  font-size: 1.35em;
+.empresaMain .homeEmp .texto P {
+  font-size: 1.6em;
   font-weight: 300;
   text-align: justify;
   line-height: 2.5em;
@@ -351,20 +356,44 @@ main .homeEmp .texto P {
   margin-bottom: 0;
   margin-right: 50px;
 }
-main .homeEmp .texto P:last-child {
+.empresaMain .homeEmp .texto P:last-child {
   margin-top: 1em;
 }
-main .nuestrosPlanes .contenedorCards .cardProducto {
+.empresaMain .nuestrosPlanes .contenedorCards .cardProducto {
   width: 50px;
+}
+.empresaMain .buttonKitActivo.empresa {
+  background: #A855F7;
+}
+.empresaMain .buttonKitActivo.empresa:hover {
+  background-color: #9333ea;
 }
 
 @media (max-width: 576px) {
-  main .homeEmp .texto {
+  .empresaMain .homeEmp {
+    padding-top: 0;
+    width: 90%;
+  }
+  .empresaMain .homeEmp .texto {
     display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
   }
-  main .homeEmp .texto img {
+  .empresaMain .homeEmp .texto P {
+    font-size: 1.3em;
+    text-align: left;
+    line-height: 1.5em;
+    align-self: center;
+    margin-right: 0px;
+  }
+  .empresaMain .homeEmp .texto P:first-child {
+    margin-top: 1.5em;
+  }
+  .empresaMain .homeEmp .texto img {
     width: 300px;
+    height: 200px;
   }
 }
 .casco {
@@ -396,7 +425,7 @@ main .nuestrosPlanes .contenedorCards .cardProducto {
 
 .show-nav {
   animation-name: show-nav;
-  animation-duration: 0.7s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
@@ -407,7 +436,7 @@ main .nuestrosPlanes .contenedorCards .cardProducto {
 }
 .hide-nav {
   animation-name: hide-nav;
-  animation-duration: 0.7s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
@@ -416,7 +445,7 @@ main .nuestrosPlanes .contenedorCards .cardProducto {
     left: 0px;
   }
   100% {
-    left: 400px;
+    left: 600px;
   }
 }
 #btn-close {
@@ -616,6 +645,24 @@ main .home .btnArt .btn {
 .contacto .formulario input::placeholder {
   color: #f1f5f9;
 }
+.contacto .formulario input[type=submit] {
+  padding-left: 15px;
+  margin: 25px 0px 70px 0px;
+  height: 90px;
+  width: 230px;
+  border-radius: 10px;
+  border: #9333ea 1px solid;
+}
+.contacto .formulario input[type=submit]:hover {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-name: delay;
+}
+@keyframes delay {
+  100% {
+    background-color: #9333ea;
+  }
+}
 .contacto .formulario textarea {
   height: auto;
   margin: 25px 0px;
@@ -627,12 +674,6 @@ main .home .btnArt .btn {
 }
 .contacto .formulario textarea::placeholder {
   color: #fff;
-}
-.contacto .formulario button {
-  margin: 25px 0px 70px 0px;
-  height: 90px;
-  width: 230px;
-  border-radius: 10px;
 }
 
 /* FOOTER */
@@ -678,12 +719,18 @@ footer .copy span {
 }
 
 /* Pagina Persona */
+#introduccion {
+  background-color: #1e293b;
+}
+
 .mainPerfilPersonal {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #1e293b;
 }
 .mainPerfilPersonal img {
-  margin: 25px 25px 25px 80px;
+  width: 500px;
 }
 
 .textPerfilPersonal {
@@ -691,11 +738,15 @@ footer .copy span {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: 25px 80px 25px 25px;
+  width: 60%;
+  margin-left: 50px;
 }
 .textPerfilPersonal p {
   font-size: 25px;
   padding: 10px;
+}
+.textPerfilPersonal p:last-child {
+  align-self: flex-start;
 }
 .textPerfilPersonal button {
   background-color: #0891b2;
@@ -706,6 +757,10 @@ footer .copy span {
   margin: 10px;
 }
 
+#nuestrosPlanes {
+  background-color: #1e293b;
+}
+
 .contenedorCards {
   display: flex;
   flex-direction: row;
@@ -714,14 +769,14 @@ footer .copy span {
 }
 
 .cardProducto {
-  height: 480px;
-  width: 380px;
+  height: 400px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 25px;
-  padding: 0px 30px;
+  padding: 0px 20px;
   background-color: #e2e8f0;
   border: solid 1px;
   border-color: #340561;
@@ -730,8 +785,15 @@ footer .copy span {
 .cardProducto p {
   color: #000;
 }
-.cardProducto li {
+.cardProducto ul {
+  padding-left: 0;
+}
+.cardProducto ul li {
+  list-style: none;
   color: #000;
+}
+.cardProducto ul li img {
+  margin-right: 10px;
 }
 
 .cardTitulo {
@@ -740,7 +802,7 @@ footer .copy span {
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
-  width: 378px;
+  width: 348px;
   height: 68px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -762,8 +824,8 @@ footer .copy span {
 
 .buttonKit {
   border: solid 2px #0891b2;
-  height: 65px;
-  width: 257px;
+  height: 45px;
+  width: 150px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -776,8 +838,8 @@ footer .copy span {
 .buttonKitActivo {
   color: #fff;
   background-color: #0891b2;
-  height: 65px;
-  width: 257px;
+  height: 45px;
+  width: 150px;
   margin-bottom: 20px;
   border: none;
   border-radius: 5px;
@@ -842,7 +904,7 @@ footer .copy span {
     justify-content: center;
     align-items: center;
     top: 0;
-    left: 400px;
+    left: 600px;
     padding: 0;
     width: 100vw;
     height: 100vh;
@@ -872,6 +934,18 @@ footer .copy span {
   main .home .btnArt {
     margin-top: 40px;
     width: 85%;
+  }
+  .mainPerfilPersonal img {
+    width: 300px;
+  }
+  .textPerfilPersonal {
+    width: 90%;
+  }
+  .cardTitulo {
+    width: 318px;
+  }
+  .cardProducto {
+    width: 320px;
   }
   .promoExtranjero {
     flex-direction: column;
