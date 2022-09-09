@@ -179,7 +179,24 @@ main {
       &::placeholder {
         color: #f1f5f9;
       }
+      &[type="submit"] {
+        padding-left: 15px;
+        margin: 25px 0px 70px 0px;
+        height: 90px;
+        width: 230px;
+        border-radius: 10px;
+        border: #9333ea 1px solid;
+        &:hover {
+          animation-duration: 0.3s;
+          animation-fill-mode: forwards;
+          animation-name: delay;
+        }
+        @keyframes delay {
+          100% {background-color: #9333ea;}
+        }
+      }
     }
+
     textarea {
       height: auto;
       margin: 25px 0px;
@@ -191,12 +208,6 @@ main {
       &::placeholder {
         color: #fff;
       }
-    }
-    button {
-      margin: 25px 0px 70px 0px;
-      height: 90px;
-      width: 230px;
-      border-radius: 10px;
     }
   }
 }
@@ -246,11 +257,16 @@ footer {
 }
 
 /* Pagina Persona */
+#introduccion {
+  background-color: #1e293b;
+}
 .mainPerfilPersonal {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #1e293b;
   img {
-    margin: 25px 25px 25px 80px;
+    width: 500px;
   }
 }
 .textPerfilPersonal {
@@ -258,10 +274,14 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: 25px 80px 25px 25px;
+  width: 60%;
+  margin-left: 50px;
   p {
     font-size: 25px;
     padding: 10px;
+    &:last-child {
+      align-self: flex-start;
+    }
   }
   button {
     background-color: #0891b2;
@@ -275,6 +295,9 @@ footer {
     // }
   }
 }
+#nuestrosPlanes {
+  background-color: #1e293b;
+}
 .contenedorCards {
   display: flex;
   flex-direction: row;
@@ -282,14 +305,14 @@ footer {
   justify-content: center;
 }
 .cardProducto {
-  height: 480px;
-  width: 380px;
+  height: 400px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 25px;
-  padding: 0px 30px;
+  padding: 0px 20px;
   background-color: #e2e8f0;
   border: solid 1px;
   border-color: #340561;
@@ -297,8 +320,15 @@ footer {
   p {
     color: #000;
   }
-  li {
-    color: #000;
+  ul {
+    padding-left: 0;
+    li {
+      list-style: none;
+      color: #000;
+      img {
+        margin-right: 10px;
+      }
+    }
   }
 }
 .cardTitulo {
@@ -307,7 +337,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
-  width: 378px;
+  width: 348px;
   height: 68px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -326,8 +356,8 @@ footer {
 }
 .buttonKit {
   border: solid 2px #0891b2;
-  height: 65px;
-  width: 257px;
+  height: 45px;
+  width: 150px;
   margin-bottom: 20px;
   border-radius: 5px;
   &:hover {
@@ -339,8 +369,8 @@ footer {
 .buttonKitActivo {
   color: #fff;
   background-color: #0891b2;
-  height: 65px;
-  width: 257px;
+  height: 45px;
+  width: 150px;
   margin-bottom: 20px;
   border: none;
   border-radius: 5px;
@@ -413,7 +443,7 @@ footer {
         justify-content: center;
         align-items: center;
         top: 0;
-        left: 400px;
+        left: 600px;
         padding: 0;
         width: 100vw;
         height: 100vh;
@@ -451,6 +481,24 @@ footer {
         width: 85%;
       }
     }
+  }
+
+  .mainPerfilPersonal {
+    img {
+      width: 300px;
+    }
+  }
+
+  .textPerfilPersonal {
+    width: 90%;
+  }
+
+  .cardTitulo {
+    width: 318px;
+  }
+
+  .cardProducto {
+    width: 320px;
   }
 
   .promoExtranjero {

@@ -1,4 +1,5 @@
-main {
+.empresaMain {
+    background-color: #1e293b;
     .homeEmp {
         padding-top: 100px;
         width: 80%;
@@ -6,15 +7,16 @@ main {
         justify-content: center;
         align-items: center;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column; 
         .texto {
             display: flex;
+            margin-bottom: 10em;
             img {
-                width: 500px;
+                max-width: 600px;
+                height: 400px;
             }
             P {
-                font-size: 1.35em;
+                font-size: 1.6em;
                 font-weight: 300;
                 text-align: justify;
                 line-height: 2.5em;
@@ -32,19 +34,42 @@ main {
             .cardProducto {
                 width: 50px;
             }
+            
         }
         
+    }
+    .buttonKitActivo.empresa {
+        background: #A855F7;
+        &:hover {
+            background-color: #9333ea;
+        }
     }
 }
 
 @media (max-width: 576px) {
-    main {
+    .empresaMain {
         .homeEmp {
+            padding-top: 0;
+            width: 90%;
             .texto {
                 display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
                 flex-wrap: wrap;
+                P {
+                    font-size: 1.3em;
+                    text-align:left;
+                    line-height: 1.5em;
+                    align-self: center;
+                    margin-right: 0px;
+                    &:first-child {
+                        margin-top: 1.5em;
+                    }
+                }
                 img {
                     width: 300px;
+                    height: 200px;
                 }
             }
         }
