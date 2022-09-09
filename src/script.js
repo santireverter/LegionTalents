@@ -2,6 +2,10 @@ let navbar = document.getElementById("navbar");
 let opB = document.getElementById("opB");
 let opC = document.getElementById("opC");
 let opD = document.getElementById("opD");
+let circle = document.querySelector(".fa-circle");
+let btn = document.getElementById("nav-btn")
+let btnClose = document.getElementById("btn-close")
+let ul = document.getElementById("nav-ul")
 
 window.onscroll = function () {
   headerColor();
@@ -15,28 +19,42 @@ function headerColor() {
   }
 }
 
-let count = 1;
-
 function carousel() {
     setTimeout(() => {
       opB.classList.add("show");
       opC.classList.remove("show");
       opD.classList.remove("show");
-      count++;
     }, 2000);
     setTimeout(() => {
       opB.classList.remove("show");
       opC.classList.add("show");
       opD.classList.remove("show");
-      count++;
+      circle.classList.add("color")
     }, 4000);
     setTimeout(() => {
     opB.classList.remove("show");
     opC.classList.remove("show");
     opD.classList.add("show");
-    count = 0;
     carousel()
   }, 6000);
 }
 
 carousel()
+
+btn.addEventListener('click', () => {
+  click()
+})
+
+function click() {
+  let div = document.createElement('div')
+  ul.classList.toggle("show-nav")
+  ul.classList.remove("hide-nav")
+  div.innerHTML = `<button id="btn-close" onclick="clickClose()"><i class="fa-solid fa-xmark"></i></button>`
+  div.id = "btn-close"
+  ul.appendChild(div)
+}
+
+function clickClose() {
+  ul.classList.toggle("show-nav")
+  ul.classList.add("hide-nav")
+}

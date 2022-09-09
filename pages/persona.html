@@ -8,30 +8,36 @@
   <link rel="stylesheet" href="../src/boots/css/bootstrap.min.css">
   <link rel="stylesheet" href="../src/css/output.css">
   <link rel="shortcut icon" href="../src/img/ico.png" type="image/x-icon">
+  <script
+      src="https://kit.fontawesome.com/d6cbf412fd.js"
+      crossorigin="anonymous"
+    ></script>
   <title>Perfil Personal | Legion Talents</title>
-  <script src="https://kit.fontawesome.com/d6cbf412fd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <nav id="navbar" class="navbar navbar-expand-sm navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html"><img src="../src/img/ico.png" alt="logo" /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" href="#home">Home</a>
-            <a class="nav-link" href="#serv">Servicios</a>
-            <a class="nav-link" href="#nos">Nosotros</a>
-            <a class="nav-link" href="#cont">Contacto</a>
-          </div>
-        </div>
-      </div>
+    <nav id="navbar">
+      <i id="nav-btn" class="fa-solid fa-bars"></i>
+      <a class="logoMobile" href="../index.html"><img class="logoMobile" src="../src/img/logo home.png" alt="logo"></a>
+      <a class="logoPc" href="../index.html"><img class="logoPc" src="../src/img/ico.png" alt="logo" /></a>
+      <ul id="nav-ul">
+        
+        <li><a onclick="clickClose()" href="#home">Home</a></li>
+        <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
+        <li><a onclick="clickClose()" href="#nos">Nosotros</a></li>
+        <li><a onclick="clickClose()" href="#cont">Contacto</a></li>
+      </ul>
     </nav>
   </header>
+
+  <div class="wpp">
+    <div class="icon">
+      <a href="https://wa.me/5493512077580"
+        ><img src="../src/img/wpp icon.png" alt=""></i
+      ></a>
+    </div>
+  </div>
 
   <main>
     <section id="introduccion">
