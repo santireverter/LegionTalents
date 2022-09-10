@@ -30,7 +30,7 @@ main .serv article .card i {
   margin: 50px auto;
 }
 main .serv article .card h5 {
-  margin-left: 8px;
+  margin-top: 1em;
 }
 main .serv article .card span {
   font-size: 15px;
@@ -112,10 +112,21 @@ main .nos .grid .cardNos {
   align-items: center;
 }
 main .nos .grid .cardNos img {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 200px;
   filter: grayscale(80%);
+}
+main .nos .grid .cardNos p {
+  text-align: center;
+  font-weight: 275;
+}
+main .nos .grid .cardNos .redes {
+  display: flex;
+  gap: 15px;
+}
+main .nos .grid .cardNos .redes i {
+  font-size: 25px;
 }
 main .nos .grid .num {
   grid-area: num;
@@ -126,7 +137,7 @@ main .nos .grid .num {
 }
 main .nos .grid .num div span {
   font-size: 40px;
-  font-weight: bolder;
+  font-weight: 275;
   margin: 0 auto;
 }
 main .nos .testi {
@@ -226,10 +237,10 @@ main .nos .testi .cardBody .stars i {
 }
 @media (max-width: 576px) {
   main .serv {
-    background-color: #0F172A;
+    background-color: #0f172a;
   }
   main .nos {
-    background-color: #0F172A;
+    background-color: #0f172a;
     /* TESTIMONIOS */
   }
   main .nos .grid {
@@ -261,8 +272,12 @@ main .nos .testi .cardBody .stars i {
     width: 380px;
     background-color: #131d35;
   }
+  main .nos .grid .cardNos img {
+    width: 250px;
+    height: 250px;
+  }
   main .nos .testi {
-    background-color: #0F172A;
+    background-color: #0f172a;
   }
   @keyframes slide {
     0% {
@@ -296,7 +311,7 @@ main .nos .testi #opD .cara {
   main .nos .testi .cardB {
     height: auto;
     margin-top: 20px;
-    background-color: #1E293B;
+    background-color: #1e293b;
   }
   main .nos .testi .cardB .cardBTest {
     align-self: center;
@@ -319,7 +334,7 @@ main .nos .testi #opD .cara {
     font-size: 15px;
   }
   main .contacto {
-    background-color: #0F172A;
+    background-color: #0f172a;
   }
 }
 @media (max-width: 425px) {
@@ -367,6 +382,12 @@ main .nos .testi #opD .cara {
 }
 .empresaMain .buttonKitActivo.empresa:hover {
   background-color: #9333ea;
+}
+.empresaMain .buttonKit.empresa {
+  border: solid 2px #A855F7;
+}
+.empresaMain .buttonKit.empresa:hover {
+  background-color: #A855F7;
 }
 
 @media (max-width: 576px) {
@@ -910,6 +931,10 @@ footer .copy span {
     height: 100vh;
     position: absolute;
     background-color: #0f172a;
+  }
+  header nav ul .navIcons i {
+    font-size: 25px;
+    padding: 5px;
   }
   .wpp {
     margin-right: 30px;

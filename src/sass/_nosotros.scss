@@ -34,12 +34,22 @@ main {
         flex-direction: column;
         justify-self: center;
         align-items: center;
-        
         img {
-          width: 250px;
-          height: 250px;
+          width: 300px;
+          height: 300px;
           border-radius: 200px;
           filter: grayscale(80%);
+        }
+        p {
+          text-align: center;
+          font-weight: 275;
+        }
+        .redes {
+          display: flex;
+          gap: 15px;
+          i {
+            font-size: 25px;
+          }
         }
       }
       .num {
@@ -51,7 +61,7 @@ main {
         div {
           span {
             font-size: 40px;
-            font-weight: bolder;
+            font-weight: 275;
             margin: 0 auto;
           }
         }
@@ -89,8 +99,12 @@ main {
         animation-fill-mode: forwards;
       }
       @keyframes slide {
-        0% {opacity: 0;}
-        100% {opacity: 100%;}
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 100%;
+        }
       }
       .cardB {
         width: 90%;
@@ -156,10 +170,10 @@ main {
 @media (max-width: 576px) {
   main {
     .serv {
-      background-color: #0F172A;
+      background-color: #0f172a;
     }
     .nos {
-      background-color: #0F172A;
+      background-color: #0f172a;
       .grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -193,14 +207,22 @@ main {
           justify-self: center;
           width: 380px;
           background-color: #131d35;
+          img {
+            width: 250px;
+            height: 250px;
+          }
         }
       }
       /* TESTIMONIOS */
       .testi {
-        background-color: #0F172A;
+        background-color: #0f172a;
         @keyframes slide {
-          0% {opacity: 100%;}
-          100% {opacity: 100%;}
+          0% {
+            opacity: 100%;
+          }
+          100% {
+            opacity: 100%;
+          }
         }
         .points {
           display: none;
@@ -222,7 +244,7 @@ main {
         .cardB {
           height: auto;
           margin-top: 20px;
-          background-color: #1E293B;
+          background-color: #1e293b;
           .cardBTest {
             align-self: center;
             h5 {
@@ -249,7 +271,7 @@ main {
       }
     }
     .contacto {
-      background-color: #0F172A;
+      background-color: #0f172a;
     }
   }
 }

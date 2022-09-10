@@ -44,6 +44,12 @@
             background-color: #9333ea;
         }
     }
+    .buttonKit.empresa {
+        border: solid 2px #A855F7;
+        &:hover {
+            background-color: #A855F7;
+        }
+    }
 }
 
 @media (max-width: 576px) {

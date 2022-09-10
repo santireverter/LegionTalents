@@ -46,12 +46,28 @@ btn.addEventListener('click', () => {
 })
 
 function click() {
-  let div = document.createElement('div')
   ul.classList.toggle("show-nav")
   ul.classList.remove("hide-nav")
-  div.innerHTML = `<button id="btn-close" onclick="clickClose()"><i class="fa-solid fa-xmark"></i></button>`
-  div.id = "btn-close"
-  ul.appendChild(div)
+  ul.innerHTML = 
+  `<button id="btn-close" onclick="clickClose()"><i class="fa-solid fa-xmark"></i></button>
+
+  <li><a onclick="clickClose()" href="#home">Home</a></li>
+  <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
+  <li><a onclick="clickClose()" href="#nos">Nosotros</a></li>
+  <li><a onclick="clickClose()" href="#testi">Testimonios</a></li>
+  <li><a onclick="clickClose()" href="#cont">Contacto</a></li>
+  
+  <div class="navIcons">
+    <a
+      href="https://www.linkedin.com/company/legion-talents"
+      ><i class="fa-brands fa-linkedin"></i
+    ></a>
+    <a href="https://www.instagram.com/legiontalents/"
+      ><i class="fa-brands fa-instagram"></i
+    ></a>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-twitter"></i>
+  </div>`
 }
 
 function clickClose() {
