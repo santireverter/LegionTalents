@@ -349,10 +349,10 @@ main .nos .testi #opD .cara {
   padding-top: 100px;
   width: 80%;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .empresaMain .homeEmp .texto {
   display: flex;
@@ -390,16 +390,30 @@ main .nos .testi #opD .cara {
   background-color: #A855F7;
 }
 
+@media (max-width: 992px) {
+  .empresaMain .homeEmp {
+    width: 90%;
+  }
+  .empresaMain .homeEmp .texto P {
+    font-size: 1.4em;
+    text-align: left;
+    line-height: 2em;
+    align-self: center;
+    margin-right: 0px;
+  }
+  .empresaMain .homeEmp .texto img {
+    margin: auto 0;
+    width: 350px;
+    height: 250px;
+  }
+}
 @media (max-width: 576px) {
   .empresaMain .homeEmp {
     padding-top: 0;
     width: 90%;
   }
   .empresaMain .homeEmp .texto {
-    display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
   }
   .empresaMain .homeEmp .texto P {
@@ -415,6 +429,7 @@ main .nos .testi #opD .cara {
   .empresaMain .homeEmp .texto img {
     width: 300px;
     height: 200px;
+    margin: 0 auto;
   }
 }
 .casco {
@@ -563,6 +578,9 @@ header nav ul {
   align-items: center;
   gap: 40px;
   margin: 0;
+}
+header nav ul .navIcons {
+  display: none;
 }
 header nav li {
   list-style: none;
@@ -931,6 +949,9 @@ footer .copy span {
     height: 100vh;
     position: absolute;
     background-color: #0f172a;
+  }
+  header nav ul .navIcons {
+    display: flex;
   }
   header nav ul .navIcons i {
     font-size: 25px;

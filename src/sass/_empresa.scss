@@ -4,10 +4,10 @@
         padding-top: 100px;
         width: 80%;
         margin: 0 auto;
-        justify-content: center;
-        align-items: center;
         display: flex;
         flex-direction: column; 
+        justify-content: center;
+        align-items: center;
         .texto {
             display: flex;
             margin-bottom: 10em;
@@ -52,16 +52,36 @@
     }
 }
 
+@media (max-width: 992px) {
+    .empresaMain {
+        .homeEmp {
+            width: 90%;
+            .texto {
+                P {
+                    font-size: 1.4em;
+                    text-align:left;
+                    line-height: 2em;
+                    align-self: center;
+                    margin-right: 0px;
+                }
+                img {
+                    margin: auto 0;
+                    width: 350px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+    
+}
+
 @media (max-width: 576px) {
     .empresaMain {
         .homeEmp {
             padding-top: 0;
             width: 90%;
             .texto {
-                display: flex;
                 flex-direction: column-reverse;
-                justify-content: center;
-                align-items: center;
                 flex-wrap: wrap;
                 P {
                     font-size: 1.3em;
@@ -76,6 +96,7 @@
                 img {
                     width: 300px;
                     height: 200px;
+                    margin: 0 auto;
                 }
             }
         }

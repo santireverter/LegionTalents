@@ -72,6 +72,9 @@ header {
       align-items: center;
       gap: 40px;
       margin: 0;
+      .navIcons {
+        display: none;
+      }
     }
     li {
       list-style: none;
@@ -450,6 +453,7 @@ footer {
         position: absolute;
         background-color: #0f172a;
         .navIcons {
+          display: flex;
           i {
             font-size: 25px;
             padding: 5px;

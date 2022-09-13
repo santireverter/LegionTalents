@@ -3,9 +3,9 @@ let opB = document.getElementById("opB");
 let opC = document.getElementById("opC");
 let opD = document.getElementById("opD");
 let circle = document.querySelector(".fa-circle");
-let btn = document.getElementById("nav-btn")
-let btnClose = document.getElementById("btn-close")
-let ul = document.getElementById("nav-ul")
+let btn = document.getElementById("nav-btn");
+let btnClose = document.getElementById("btn-close");
+let ul = document.getElementById("nav-ul");
 
 window.onscroll = function () {
   headerColor();
@@ -20,36 +20,34 @@ function headerColor() {
 }
 
 function carousel() {
-    setTimeout(() => {
-      opB.classList.add("show");
-      opC.classList.remove("show");
-      opD.classList.remove("show");
-    }, 2000);
-    setTimeout(() => {
-      opB.classList.remove("show");
-      opC.classList.add("show");
-      opD.classList.remove("show");
-      circle.classList.add("color")
-    }, 4000);
-    setTimeout(() => {
+  setTimeout(() => {
+    opB.classList.add("show");
+    opC.classList.remove("show");
+    opD.classList.remove("show");
+  }, 2000);
+  setTimeout(() => {
+    opB.classList.remove("show");
+    opC.classList.add("show");
+    opD.classList.remove("show");
+  }, 4000);
+  setTimeout(() => {
     opB.classList.remove("show");
     opC.classList.remove("show");
     opD.classList.add("show");
-    carousel()
+    carousel();
   }, 6000);
 }
 
-carousel()
+carousel();
 
-btn.addEventListener('click', () => {
-  click()
-})
+btn.addEventListener("click", () => {
+  click();
+});
 
 function click() {
-  ul.classList.toggle("show-nav")
-  ul.classList.remove("hide-nav")
-  ul.innerHTML = 
-  `<button id="btn-close" onclick="clickClose()"><i class="fa-solid fa-xmark"></i></button>
+  ul.classList.toggle("show-nav");
+  ul.classList.remove("hide-nav");
+  ul.innerHTML = `<button id="btn-close" onclick="clickClose()"><i class="fa-solid fa-xmark"></i></button>
 
   <li><a onclick="clickClose()" href="#home">Home</a></li>
   <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
@@ -67,10 +65,10 @@ function click() {
     ></a>
     <i class="fa-brands fa-facebook"></i>
     <i class="fa-brands fa-twitter"></i>
-  </div>`
+  </div>`;
 }
 
 function clickClose() {
-  ul.classList.toggle("show-nav")
-  ul.classList.add("hide-nav")
+  ul.classList.toggle("show-nav");
+  ul.classList.add("hide-nav");
 }
