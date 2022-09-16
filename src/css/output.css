@@ -609,7 +609,7 @@ footer {
       font-weight: 600; }
 
 /* Pagina Persona */
-#introduccion {
+.introduccion {
   background-color: #1e293b; }
 
 .mainPerfilPersonal {
