@@ -19,6 +19,8 @@ function headerColor() {
   }
 }
 
+carousel();
+
 function carousel() {
   setTimeout(() => {
     opB.classList.add("show");
@@ -37,8 +39,6 @@ function carousel() {
     carousel();
   }, 6000);
 }
-
-carousel();
 
 btn.addEventListener("click", () => {
   click();

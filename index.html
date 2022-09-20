@@ -1,216 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/boots/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
+    />
+    <link rel="shortcut icon" href="src/img/ico.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/d6cbf412fd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <title>Legion Talents</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/boots/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="src/css/output.css" />
-  <link rel="shortcut icon" href="src/img/ico.png" type="image/x-icon" />
-  <script src="https://kit.fontawesome.com/d6cbf412fd.js" crossorigin="anonymous"></script>
-  <title>Legion Talents</title>
-</head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <i id="nav-btn" class="fa-solid fa-bars"></i>
+        <a class="logoMobile" href="index.html"
+          ><img class="logoMobile" src="src/img/logo home.png" alt="logo"
+        /></a>
+        <a class="logoPc" href="index.html"
+          ><img class="logoPc" src="src/img/ico.png" alt="logo"
+        /></a>
+        <ul id="nav-ul">
+          <li><a onclick="clickClose()" href="#home">Home</a></li>
+          <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
+          <li><a onclick="clickClose()" href="#nos">Nosotros</a></li>
+          <li><a onclick="clickClose()" href="#testi">Testimonios</a></li>
+          <!-- <li><a onclick="clickClose()" href="#cont">Contacto</a></li> -->
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <nav id="navbar">
-      <i id="nav-btn" class="fa-solid fa-bars"></i>
-      <a class="logoMobile" href="index.html"><img class="logoMobile" src="src/img/logo home.png" alt="logo" /></a>
-      <a class="logoPc" href="index.html"><img class="logoPc" src="src/img/ico.png" alt="logo" /></a>
-      <ul id="nav-ul">
-        <li><a onclick="clickClose()" href="#home">Home</a></li>
-        <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
-        <li><a onclick="clickClose()" href="#nos">Nosotros</a></li>
-        <li><a onclick="clickClose()" href="#testi">Testimonios</a></li>
-        <!-- <li><a onclick="clickClose()" href="#cont">Contacto</a></li> -->
-      </ul>
-    </nav>
-  </header>
-
-  <div class="wpp">
-    <div class="icon">
-      <a href="https://wa.me/5493512077580"><img src="src/img/wpp icon.png" alt="" /></a>
-    </div>
-  </div>
-
-  <main>
-    <section id="home" class="home">
-      <div class="blur"></div>
-      <img src="src/img/ico.png" alt="casco" class="casco" />
-      <h1 class="title">Legion Talents</h1>
-      <span>Expand your Horizons</span>
-      <p>Soluciones tecnológicas y perfiles profesionales a tu medida.</p>
-      <article class="btnArt">
-        <a href="pages/persona.html"><button type="button" class="btn btn-outline-primary">
-            Personal
-          </button></a>
-        <a href="pages/empresa.html"><button type="button" class="btn btn-primary">
-            Empresarial
-          </button></a>
-      </article>
-    </section>
-
-    <section class="serv" id="serv">
-      <h3 class="subtitle">NUESTROS SERVICIOS</h3>
-      <article>
-        <div class="card">
-          <img src="src/img/perfilPersonal.svg" alt="" />
-          <h5>Perfil Personal</h5>
-          <p>
-            Te asesoramos con el armado de CV y te ayudamos potenciar tu
-            perfil de linkedin para que encuentres tu trabajo soñado.
-          </p>
-          <a href="./pages/persona.html"><button id="btnP">Quiero saber más</button></a>
-        </div>
-
-        <div class="card">
-          <img src="src/img/perfilEmpresa.svg" alt="" />
-          <h5>Perfil Empresarial</h5>
-          <p>
-            Hacemos desarrollo de software a la medida de tus necesidades.
-            Sistemas personalizados cálidos y fáciles de usar.
-          </p>
-          <a href="./pages/empresa.html"><button id="btnN">Quiero saber más</button></a>
-        </div>
-      </article>
-    </section>
-
-    <section class="nos" id="nos">
-      <h3 class="subtitle">NOSOTROS</h3>
-      <div class="grid">
-        <div class="cardNos ceo">
-          <img src="src/img/CEO.jpg" alt="ceo" />
-          <h5>Ignacio Porro</h5>
-          <span>CEO</span>
-          <p>"Creemos en que el desarrollo tecnologico de las empresas, debe estar acompañado con crecimiento
-            profesional y humano."</p>
-          <div class="redes">
-            <a href="https://www.linkedin.com/in/iporro/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </div>
-        </div>
-        <div class="cardNos cto">
-          <img src="src/img/CTO.jpg" alt="cto" />
-          <h5>Agustín Bellini</h5>
-          <span>CTO</span>
-          <p>"Nuestra mision es demostrarle a nuestros clientes que no somos una software factory más."</p>
-          <div class="redes">
-            <a href="https://www.linkedin.com/in/agustinbelliniit/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </div>
-        </div>
-        <p>
-          Nos especializamos en headhunting de perfiles IT y tradicionales,
-          teniendo una amplia experiencia en busquedas, ofreciendo un SLA de
-          72 hs para presentar postulantes a nuestros clientes.
-        </p>
+    <div class="wpp">
+      <div class="icon">
+        <a href="https://wa.me/5493512077580"
+          ><img src="src/img/wpp icon.png" alt=""
+        /></a>
       </div>
-      <section id="testi" class="testi">
-        <h4 class="subtitle-sm">TESTIMONIOS</h4>
+    </div>
 
-        <div id="opB" class="cardB opB show">
-          <div class="cardBTest">
-            <img class="cor" src="src/img/“.png" alt="corchetes" />
-            <img class="cara" src="src/img/Ellipse 1.png" alt="Anibal S" />
-            <h5>Aníbal, S.</h5>
-          </div>
-          <div class="cardBody">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <p>
-              Gracias a Legion Talents pude encontrar el trabajo que tanto
-              quería. Fue un game changer.
-            </p>
-          </div>
-        </div>
-        <div id="opC" class="cardB opC">
-          <div class="cardBTest">
-            <img class="cor" src="src/img/“.png" alt="corchetes" />
-            <img class="cara" src="src/img/pablo g.jpg" alt="Pablo G" />
-            <h5>Pablo, G.</h5>
-          </div>
-          <div class="cardBody">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic,
-              architecto dolor adipisci mollitia delectus, tenetur esse cumque
-              aliquid laborum, exercitationem laboriosam! Consequatur non
-              eligendi libero quis, sit esse ea in!
-            </p>
-          </div>
-        </div>
-        <div id="opD" class="cardB opD">
-          <div class="cardBTest">
-            <img class="cor" src="src/img/“.png" alt="corchetes" />
-            <img class="cara" src="src/img/anto p.jpg" alt="Antonella P" />
-            <h5>Antonella, P.</h5>
-          </div>
-          <div class="cardBody">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <p>
-              Me gustó mucho la verdad, excelente servicio. No podría pedir
-              más de lo que ya me dieron, lo voy a recomendar.
-            </p>
-          </div>
-        </div>
-        <div class="points">
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle"></i>
-          <i class="fa-solid fa-circle"></i>
-        </div>
+    <main>
+      <section id="home" class="home">
+        <div class="blur"></div>
+        <img src="src/img/ico.png" alt="casco" class="casco" />
+        <h1 class="title">Legion Talents</h1>
+        <span>Expand your Horizons</span>
+        <p>Soluciones tecnológicas y perfiles profesionales a tu medida.</p>
+        <article class="btnArt">
+          <a href="pages/persona.html"
+            ><button type="button" class="btn btn-outline-primary">
+              Personal
+            </button></a
+          >
+          <a href="pages/empresa.html"
+            ><button type="button" class="btn btn-primary">
+              Empresarial
+            </button></a
+          >
+        </article>
       </section>
-    </section>
 
-  </main>
+      <section class="serv" id="serv">
+        <h3 class="subtitle">NUESTROS SERVICIOS</h3>
+        <article>
+          <div class="card">
+            <img src="src/img/perfilPersonal.svg" alt="" />
+            <h5>Perfil Personal</h5>
+            <p>
+              Te asesoramos con el armado de CV y te ayudamos potenciar tu
+              perfil de linkedin para que encuentres tu trabajo soñado.
+            </p>
+            <a href="./pages/persona.html"
+              ><button id="btnP">Quiero saber más</button></a
+            >
+          </div>
 
-  <footer>
-    <img src="src/img/ico.png" alt="casco" class="casco" />
-    <h3 class="title">Legion Talents</h3>
-    <ul class="footerRedes">
-      <li><a href="#home">Inicio</a></li>
-      <li><a href="#serv">Servicios</a></li>
-      <li><a href="#nos">Nosotros</a></li>
-      <li><a href="#testi">Testimonios</a></li>
-      <li><a href="#cont">Contacto</a></li>
-    </ul>
-    <div class="footerIcons">
-      <a href="https://www.linkedin.com/company/legion-talents"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/legiontalents/"><i class="fa-brands fa-instagram"></i></a>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-twitter"></i>
-      <a href="https://wa.me/5493512077580"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-    <div class="copy">
-      <p>&copy; Copyright <span>LegionTalents</span>. All Rights Reserved</p>
-    </div>
-  </footer>
+          <div class="card">
+            <img src="src/img/perfilEmpresa.svg" alt="" />
+            <h5>Perfil Empresarial</h5>
+            <p>
+              Hacemos desarrollo de software a la medida de tus necesidades.
+              Sistemas personalizados cálidos y fáciles de usar.
+            </p>
+            <a href="./pages/empresa.html"
+              ><button id="btnN">Quiero saber más</button></a
+            >
+          </div>
+        </article>
+      </section>
 
-  <script src="src/boots/js/bootstrap.bundle.min.js"></script>
-  <script src="src/script.js"></script>
-</body>
+      <section class="nos" id="nos">
+        <h3 class="subtitle">NOSOTROS</h3>
+        <div class="grid">
+          <div class="cardNos ceo">
+            <img src="src/img/CEO.jpg" alt="ceo" />
+            <h5>Ignacio Porro</h5>
+            <span>CEO</span>
+            <p>
+              "Creemos en que el desarrollo tecnologico de las empresas, debe
+              estar acompañado con crecimiento profesional y humano."
+            </p>
+            <div class="redes">
+              <a href="https://www.linkedin.com/in/iporro/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="cardNos cto">
+            <img src="src/img/CTO.jpg" alt="cto" />
+            <h5>Agustín Bellini</h5>
+            <span>CTO</span>
+            <p>
+              "Nuestra mision es demostrarle a nuestros clientes que no somos
+              una software factory más."
+            </p>
+            <div class="redes">
+              <a href="https://www.linkedin.com/in/agustinbelliniit/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+          <p>
+            Nos especializamos en headhunting de perfiles IT y tradicionales,
+            teniendo una amplia experiencia en busquedas, ofreciendo un SLA de
+            72 hs para presentar postulantes a nuestros clientes.
+          </p>
+        </div>
+        <section id="testi" class="testi">
+          <h4 class="subtitle-sm">TESTIMONIOS</h4>
 
+          <div id="opB" class="cardB opB show">
+            <div class="cardBTest">
+              <img class="cor" src="src/img/“.png" alt="corchetes" />
+              <img class="cara" src="src/img/felipeG.svg" alt="Anibal S" />
+              <h5>Felipe, G.</h5>
+            </div>
+            <div class="cardBody">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <p>
+                Gracias a Legion Talents pude encontrar el trabajo que tanto
+                quería. Fue un game changer.
+              </p>
+            </div>
+          </div>
+          <div id="opC" class="cardB opC">
+            <div class="cardBTest">
+              <img class="cor" src="src/img/“.png" alt="corchetes" />
+              <img class="cara" src="src/img/sofiaR.svg" alt="Pablo G" />
+              <h5>Sofía, R.</h5>
+            </div>
+            <div class="cardBody">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                architecto dolor adipisci mollitia delectus, tenetur esse cumque
+                aliquid laborum, exercitationem laboriosam! Consequatur non
+                eligendi libero quis, sit esse ea in!
+              </p>
+            </div>
+          </div>
+          <div id="opD" class="cardB opD">
+            <div class="cardBTest">
+              <img class="cor" src="src/img/“.png" alt="corchetes" />
+              <img class="cara" src="src/img/anibalS.svg" alt="Antonella P" />
+              <h5>Anibal, S.</h5>
+            </div>
+            <div class="cardBody">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <p>
+                Me gustó mucho la verdad, excelente servicio. No podría pedir
+                más de lo que ya me dieron, lo voy a recomendar.
+              </p>
+            </div>
+          </div>
+          <div class="points">
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <img src="src/img/ico.png" alt="casco" class="casco" />
+      <h3 class="title">Legion Talents</h3>
+      <ul class="footerRedes">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#serv">Servicios</a></li>
+        <li><a href="#nos">Nosotros</a></li>
+        <li><a href="#testi">Testimonios</a></li>
+      </ul>
+      <div class="footerContacto">
+        <div class="celu">
+          <i class="fa-solid fa-mobile"></i>
+          <p>+54 351 2903892</p>
+        </div>
+        <div class="mail">
+          <i class="fa-solid fa-envelope"></i>
+          <p>legiontalents@gmail.com</p>
+        </div>
+        <div class="footerIcons">
+          <a href="https://www.linkedin.com/company/legion-talents"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.instagram.com/legiontalents/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <a href="https://wa.me/5493512077580"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+      <div class="copy">
+        <p>&copy; Copyright <span>LegionTalents</span>. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="src/boots/js/bootstrap.bundle.min.js"></script>
+    <script src="src/script.js"></script>
+  </body>
 </html>

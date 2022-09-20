@@ -18,6 +18,10 @@ main {
         color: white;
         font-size: 10px;
         background-color: transparent;
+        img {
+          width: 380px;
+          height: 350px;
+        }
         i {
           font-size: 150px;
           margin: 50px auto;
@@ -67,12 +71,32 @@ main {
   }
 }
 
+@media (max-width: 576px) {
+  main {
+    .serv {
+      article {
+        .card {
+          img {
+            margin: 0 auto;
+            width: 300px;
+            height: 260px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 375px) {
   main {
     .serv {
       article {
         .card {
           width: 85%;
+          img {
+            width: 250px;
+            height: 220px;
+          }
         }
       }
     }

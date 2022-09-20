@@ -247,16 +247,35 @@ footer {
       }
     }
   }
-  .footerIcons {
-    font-size: 30px;
-    padding-bottom: 30px;
-    i {
-      padding: 7px;
+  .footerContacto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .celu {
+      display: flex;
+      align-content: center;
+      i {
+        margin-right: 7px;
+      }
+    }
+    .mail {
+      display: flex;
+      p {
+        margin: 0;
+      }
+      i {
+        margin-right: 7px;
+      }
+    }
+    .footerIcons {
+      font-size: 30px;
+      i {
+        padding: 7px;
+      }
     }
   }
-
   .copy {
-    padding-bottom: 30px;
+    padding: 30px 0;
     letter-spacing: 0.4px;
     span {
       font-weight: 600;
@@ -525,13 +544,17 @@ footer {
       font-size: 25px;
     }
     .footerRedes {
-      flex-direction: column;
-      gap: 30px;
+      gap: 5px;
     }
-    .footerIcons {
-      i {
-        padding: 4px;
-        font-size: 25px;
+    .footerContacto {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 20px;
+      .footerIcons {
+        i {
+          padding: 4px;
+          font-size: 25px;
+        }
       }
     }
   }
