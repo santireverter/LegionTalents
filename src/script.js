@@ -53,7 +53,6 @@ function click() {
   <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
   <li><a onclick="clickClose()" href="#nos">Nosotros</a></li>
   <li><a onclick="clickClose()" href="#testi">Testimonios</a></li>
-  <li><a onclick="clickClose()" href="#cont">Contacto</a></li>
   
   <div class="navIcons">
     <a
