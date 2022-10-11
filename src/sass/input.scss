@@ -502,9 +502,14 @@ footer {
       padding-top: 0;
       align-items: center;
       height: 100vh;
+      span {
+        font-size: 30px;
+      }
       p {
-        font-size: 25px;
-        width: 90%;
+        font-size: 20px;
+        width: 95%;
+        text-align: left;
+        margin-top: 20px;
       }
       .btnArt {
         margin-top: 40px;
@@ -562,6 +567,15 @@ footer {
       .btnArt {
         width: 95%;
       }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  footer {
+    .footerRedes {
+      flex-direction: column;
+      gap: 15px;
     }
   }
 }

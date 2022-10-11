@@ -998,9 +998,14 @@ footer .copy span {
     align-items: center;
     height: 100vh;
   }
+  main .home span {
+    font-size: 30px;
+  }
   main .home p {
-    font-size: 25px;
-    width: 90%;
+    font-size: 20px;
+    width: 95%;
+    text-align: left;
+    margin-top: 20px;
   }
   main .home .btnArt {
     margin-top: 40px;
@@ -1040,6 +1045,12 @@ footer .copy span {
 @media (max-width: 425px) {
   main .home .btnArt {
     width: 95%;
+  }
+}
+@media (max-width: 375px) {
+  footer .footerRedes {
+    flex-direction: column;
+    gap: 15px;
   }
 }
 
