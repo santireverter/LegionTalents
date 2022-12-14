@@ -397,14 +397,14 @@ footer {
   margin-bottom: 20px;
   border: none;
   border-radius: 5px;
-  // &:hover{
-  //   border: solid #fff 2px;
-  // }
+  &:hover{
+    background-color: #1d788f;
+  }
 }
 .buttonPromo {
   background-color: transparent;
   color: #fff;
-  border: solid 2px #0891b2;
+  border: solid 2px #28b1f2;
   height: 65px;
   width: 257px;
   margin-bottom: 20px;
@@ -522,10 +522,16 @@ footer {
     img {
       width: 300px;
     }
+    p {
+      font-size: 20px;
+    }
   }
 
   .textPerfilPersonal {
     width: 90%;
+    margin: 1.5em 0;
+    font-size: 1.3em;
+    line-height: 1.5em;
   }
 
   .cardTitulo {
@@ -577,5 +583,20 @@ footer {
       flex-direction: column;
       gap: 15px;
     }
+  }
+  .cardProducto {
+    width: 302px;
+  }
+  .cardTitulo {
+    width: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  .cardProducto {
+    width: 270px;
+  }
+  .cardTitulo {
+    width: 268px;
   }
 }

@@ -132,6 +132,9 @@ main .nos .grid .cardNos img {
   border-radius: 200px;
   filter: grayscale(80%);
 }
+main .nos .grid .cardNos h5 {
+  margin-top: 8px;
+}
 main .nos .grid .cardNos p {
   text-align: center;
   font-weight: 275;
@@ -164,6 +167,7 @@ main .nos .testi .points {
   display: flex;
   justify-content: center;
   gap: 20px;
+  opacity: 1;
 }
 main .nos .testi .opB,
 main .nos .testi .opC,
@@ -363,22 +367,22 @@ main .nos .testi #opD .cara {
 }
 .empresaMain .homeEmp {
   padding-top: 100px;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
 .empresaMain .homeEmp .texto {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10em;
 }
 .empresaMain .homeEmp .texto img {
-  max-width: 600px;
+  max-width: 45vw;
   height: 400px;
 }
 .empresaMain .homeEmp .texto P {
+  width: 45vw;
   font-size: 1.6em;
   font-weight: 300;
   text-align: justify;
@@ -407,9 +411,6 @@ main .nos .testi #opD .cara {
 }
 
 @media (max-width: 992px) {
-  .empresaMain .homeEmp {
-    width: 90%;
-  }
   .empresaMain .homeEmp .texto P {
     font-size: 1.4em;
     text-align: left;
@@ -419,20 +420,19 @@ main .nos .testi #opD .cara {
   }
   .empresaMain .homeEmp .texto img {
     margin: auto 0;
-    width: 350px;
     height: 250px;
   }
 }
 @media (max-width: 576px) {
   .empresaMain .homeEmp {
     padding-top: 0;
-    width: 90%;
   }
   .empresaMain .homeEmp .texto {
     flex-direction: column-reverse;
     flex-wrap: wrap;
   }
   .empresaMain .homeEmp .texto P {
+    width: 90vw;
     font-size: 1.3em;
     text-align: left;
     line-height: 1.5em;
@@ -443,7 +443,7 @@ main .nos .testi #opD .cara {
     margin-top: 1.5em;
   }
   .empresaMain .homeEmp .texto img {
-    width: 300px;
+    max-width: 90vw;
     height: 200px;
     margin: 0 auto;
   }
@@ -908,11 +908,14 @@ footer .copy span {
   border: none;
   border-radius: 5px;
 }
+.buttonKitActivo:hover {
+  background-color: #1d788f;
+}
 
 .buttonPromo {
   background-color: transparent;
   color: #fff;
-  border: solid 2px #0891b2;
+  border: solid 2px #28b1f2;
   height: 65px;
   width: 257px;
   margin-bottom: 20px;
@@ -1014,8 +1017,14 @@ footer .copy span {
   .mainPerfilPersonal img {
     width: 300px;
   }
+  .mainPerfilPersonal p {
+    font-size: 20px;
+  }
   .textPerfilPersonal {
     width: 90%;
+    margin: 1.5em 0;
+    font-size: 1.3em;
+    line-height: 1.5em;
   }
   .cardTitulo {
     width: 318px;
@@ -1051,6 +1060,20 @@ footer .copy span {
   footer .footerRedes {
     flex-direction: column;
     gap: 15px;
+  }
+  .cardProducto {
+    width: 302px;
+  }
+  .cardTitulo {
+    width: 300px;
+  }
+}
+@media (max-width: 320px) {
+  .cardProducto {
+    width: 270px;
+  }
+  .cardTitulo {
+    width: 268px;
   }
 }
 

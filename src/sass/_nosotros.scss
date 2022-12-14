@@ -40,6 +40,9 @@ main {
           border-radius: 200px;
           filter: grayscale(80%);
         }
+        h5 {
+          margin-top: 8px;
+        }
         p {
           text-align: center;
           font-weight: 275;
@@ -76,6 +79,8 @@ main {
         display: flex;
         justify-content: center;
         gap: 20px;
+        opacity: 1;
+
       }
       .opB,
       .opC,

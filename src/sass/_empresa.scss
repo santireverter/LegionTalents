@@ -1,22 +1,22 @@
 .empresaMain {
     background-color: #1e293b;
     background-image: none;
-    .homeEmp {
+        .homeEmp {
         padding-top: 100px;
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
         display: flex;
-        flex-direction: column; 
         justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
         .texto {
             display: flex;
+            flex-wrap: wrap;
             margin-bottom: 10em;
             img {
-                max-width: 600px;
+                max-width: 45vw;
                 height: 400px;
             }
             P {
+                width: 45vw;
                 font-size: 1.6em;
                 font-weight: 300;
                 text-align: justify;
@@ -56,7 +56,6 @@
 @media (max-width: 992px) {
     .empresaMain {
         .homeEmp {
-            width: 90%;
             .texto {
                 P {
                     font-size: 1.4em;
@@ -67,7 +66,6 @@
                 }
                 img {
                     margin: auto 0;
-                    width: 350px;
                     height: 250px;
                 }
             }
@@ -80,11 +78,11 @@
     .empresaMain {
         .homeEmp {
             padding-top: 0;
-            width: 90%;
             .texto {
                 flex-direction: column-reverse;
                 flex-wrap: wrap;
                 P {
+                    width: 90vw;
                     font-size: 1.3em;
                     text-align:left;
                     line-height: 1.5em;
@@ -95,7 +93,7 @@
                     }
                 }
                 img {
-                    width: 300px;
+                    max-width: 90vw;
                     height: 200px;
                     margin: 0 auto;
                 }

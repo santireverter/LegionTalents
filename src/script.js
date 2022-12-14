@@ -6,6 +6,7 @@ let circle = document.querySelector(".fa-circle");
 let btn = document.getElementById("nav-btn");
 let btnClose = document.getElementById("btn-close");
 let ul = document.getElementById("nav-ul");
+let points = document.getElementById('points')
 
 window.onscroll = function () {
   headerColor();
@@ -26,18 +27,30 @@ function carousel() {
     opB.classList.add("show");
     opC.classList.remove("show");
     opD.classList.remove("show");
-  }, 2000);
+    points.children[0].style.opacity = 0.5
+    points.children[1].style.opacity = 1
+    points.children[2].style.opacity = 1
+  }, 0);
   setTimeout(() => {
     opB.classList.remove("show");
     opC.classList.add("show");
     opD.classList.remove("show");
+    points.children[1].style.opacity = 0.5
+    points.children[0].style.opacity = 1
+    points.children[2].style.opacity = 1
   }, 4000);
   setTimeout(() => {
     opB.classList.remove("show");
     opC.classList.remove("show");
     opD.classList.add("show");
-    carousel();
-  }, 6000);
+
+    points.children[2].style.opacity = 0.5
+    points.children[0].style.opacity = 1
+    points.children[1].style.opacity = 1
+  }, 8000);
+  setTimeout(() => {
+    carousel()
+  }, 12000);
 }
 
 btn.addEventListener("click", () => {
@@ -47,24 +60,6 @@ btn.addEventListener("click", () => {
 function click() {
   ul.classList.toggle("show-nav");
   ul.classList.remove("hide-nav");
-  ul.innerHTML = `<button id="btn-close" onclick="clickClose()"><i class="fa-solid fa-xmark"></i></button>
-
-  <li><a onclick="clickClose()" href="#home">Home</a></li>
-  <li><a onclick="clickClose()" href="#serv">Servicios</a></li>
-  <li><a onclick="clickClose()" href="#nos">Nosotros</a></li>
-  <li><a onclick="clickClose()" href="#testi">Testimonios</a></li>
-  
-  <div class="navIcons">
-    <a
-      href="https://www.linkedin.com/company/legion-talents"
-      ><i class="fa-brands fa-linkedin"></i
-    ></a>
-    <a href="https://www.instagram.com/legiontalents/"
-      ><i class="fa-brands fa-instagram"></i
-    ></a>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-twitter"></i>
-  </div>`;
 }
 
 function clickClose() {
